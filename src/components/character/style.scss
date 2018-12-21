@@ -1,0 +1,10 @@
+.character {
+  z-index: 500;
+  cursor: pointer;
+  position: absolute;
+
+  & > img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
