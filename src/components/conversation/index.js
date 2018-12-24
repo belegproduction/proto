@@ -15,6 +15,7 @@ const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog
       </div>
       <div className={style['conversation--avatar']}>
         <img src={`/assets/characters/avatar-${character.name}.png`} alt={name} />
+        <div className={style['conversation--name']}>{character.name}</div>
       </div>
       <hr className={style['conversation--hr']}/>
       <div className={style['conversation--panel']}>

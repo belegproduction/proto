@@ -59,6 +59,13 @@
     border-color: #aa9d70;
   }
 
+  &--name {
+    margin: 10px 0;
+    font-size: bold;
+    color: $white;
+    text-align: center;
+  }
+
   &--panel {
     display: flex;
     justify-content: flex-end;
