@@ -1,4 +1,17 @@
 
 .location--type-secondLocation {
-  background: blue;
+
+  & > .Sokol {
+    max-width: 15%;
+    left: 23%;
+    bottom: 1%;
+  }
+
+  & > .firstLocation {
+    top: 86%;
+    right: 18%;
+    width: 8%;
+    height: 8%;
+  }
+
 }

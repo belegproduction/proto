@@ -10,6 +10,7 @@ export default {
     {
       name: 'firstLocation',
       available: true,
+      type: 'bottom'
     }
   ]
 };

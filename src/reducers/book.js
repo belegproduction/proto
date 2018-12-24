@@ -8,7 +8,7 @@ const initialState = fromJS({
   displayTasks: null
 });
 
-const tasksReducer = handleActions({
+const book = handleActions({
   [ADD_TASK]: (state, { payload: taskName }) => {
     let task = tasks[taskName];
     if(!task) throw new Error('Task not found!');
@@ -20,4 +20,4 @@ const tasksReducer = handleActions({
 }, initialState);
 
 
-export default tasksReducer;
+export default book;
