@@ -1,7 +1,8 @@
 import style from './style';
 
-const Character = ({ name, available, className }) => (
-  <div className={`${style.character} ${style.character}--how-${name} ${className}`}>
+const Character = ({ name, available, className, handlerClick }) => (
+  <div className={`${style.character} ${style.character}--how-${name} ${className}`} onClick={() => handlerClick(name)}>
+    <div className={style['character--name']}>{name}</div>
     <img src={`/assets/characters/${name}.png`} alt={name} />
   </div>
 );

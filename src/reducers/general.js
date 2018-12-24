@@ -5,16 +5,19 @@ import { CHANGE_LOCATION } from '../constants/actions';
 
 const initialState = fromJS({
   locations: location,
-  locationActive: location.firstLocation
+  locationActive: location.firstLocation,
+  inventory: List(),
+  actions: List(),
 });
 
 const general = handleActions({
   [CHANGE_LOCATION]: (state, { payload: locationName }) => {
-    if(!state.locations[locationName]) throw new Error('Location not found!');
+    let locations = state.get('locations');
+    if(!locations.has(locationName)) throw new Error('Location not found!');
     return state.merge({
-      locationActive: state.locations[locationName]
+      locationActive: locations.get(locationName)
     })
-  },
+  }
 }, initialState);
 
 
