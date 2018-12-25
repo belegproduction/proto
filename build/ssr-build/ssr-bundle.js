@@ -6003,15 +6003,14 @@ var middleware_style_default = /*#__PURE__*/__webpack_require__.n(middleware_sty
 
 
 
-var noty_gameElement = '.game';
-if (typeof window !== "undefined") {
-  noty_gameElement = document.getElementById('game');
-}
+// let gameElement = '.game';
+// if (typeof window !== "undefined") {
+//   gameElement = document.getElementById("game");
+// }
 
-var noty_createNoty = function createNoty(text, gameElement) {
+var noty_createNoty = function createNoty(text) {
   new noty_default.a({
     text: text,
-    container: gameElement,
     layout: 'topCenter',
     timeout: 3000
   }).show();
@@ -6025,17 +6024,17 @@ var noty_notyMiddleware = function notyMiddleware(store) {
 
 
       if (type === ADD_TASK) {
-        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E', noty_gameElement);
+        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E');
       } else if (type === CHANGE_STATUS_TASK) {
         if (payload.status === DONE) {
-          noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E', noty_gameElement);
+          noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
         }
       } else if (type === ADD_OBJECT_TO_INVENTORY) {
-        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C', noty_gameElement);
+        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C');
       } else if (type === REMOVE_OBJECT_TO_INVENTORY) {
-        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0443\u0431\u0440\u0430\u043D \u0438\u0437 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F', noty_gameElement);
+        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0443\u0431\u0440\u0430\u043D \u0438\u0437 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F');
       } else if (type === ADD_TIP_TO_TASK) {
-        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u043E', noty_gameElement);
+        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
       }
 
       return next(action);
