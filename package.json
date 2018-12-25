@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npm run -s serve",
+    "start": "node ./app/server.js",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
     "build": "preact build",
