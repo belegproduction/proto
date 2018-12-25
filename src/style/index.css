@@ -1,15 +1,20 @@
 html, body {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #0e0a0b;
-	font-family: Arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #0e0a0b;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
 }

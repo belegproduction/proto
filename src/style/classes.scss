@@ -1,0 +1,31 @@
+%modal-class {
+  @extend %modal-class-decor;
+  z-index: 999;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  max-width: 700px;
+
+}
+
+%modal-class-decor {
+  padding: 15px;
+  background: -moz-linear-gradient(left, #36311b 1%, #4e4b2c 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #36311b 1%, #4e4b2c 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #36311b 1%, #4e4b2c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36311b', endColorstr='#4e4b2c', GradientType=1); /* IE6-9 */
+  margin: auto;
+  border: 1px solid #947d35;
+  box-shadow: inset 1px 1px 1px #aa9d70;
+}
+
+%modal-bg-class {
+  z-index: 800;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}

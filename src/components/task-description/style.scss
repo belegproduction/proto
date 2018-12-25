@@ -1,0 +1,15 @@
+@import "../../style/variables";
+
+.task-description {
+  margin-top: 20px;
+  color: $white;
+
+  &--hr {
+    border-color: $yellow;
+  }
+
+  &--tip {
+    padding: 10px 0;
+    color: $white;
+  }
+}

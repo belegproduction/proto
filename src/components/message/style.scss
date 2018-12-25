@@ -1,0 +1,29 @@
+@import '../../style/variables';
+@import '../../style/classes';
+
+.message {
+  @extend %modal-class;
+  text-align: center;
+
+  &--text {
+    padding: 20px;
+    color: $yellow;
+    font-size: 25px;
+  }
+
+  &--out {
+    max-width: 50px;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &--bg {
+    @extend %modal-bg-class;
+  }
+}

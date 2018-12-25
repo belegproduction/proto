@@ -1,0 +1,9 @@
+@import '~noty/src/noty.scss';
+@import '../style/classes';
+@import '../style/variables';
+
+.noty_type__alert {
+  @extend %modal-class-decor;
+  color: $yellow;
+  text-align: center;
+}

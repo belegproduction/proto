@@ -1,0 +1,79 @@
+@import '../../style/variables';
+
+$count_cell_width: 7;
+$count_cell_height: 7;
+$size: 40;
+
+@function grid_horizontal($size, $count) {
+  $result: '';
+  @for $i from 1 through $count {
+    @if ($i == 1) {
+      $result: 0 #{$size * $i}px 0 $yellow;
+    }
+    @else {
+      $result: #{$result}, 0 #{$size * $i}px 0 $yellow;
+    }
+  }
+  @return $result;
+}
+
+@function grid_vertical($size, $count) {
+  $result: '';
+  @for $i from 1 through $count {
+    @if ($i == 1) {
+      $result: #{$size * $i}px 0  0 $yellow;
+    }
+    @else {
+      $result: #{$result}, #{$size * $i}px 0 0 $yellow;
+    }
+  }
+  @return $result;
+}
+
+.inventory {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: #{$size * $count_cell_width}px;
+  height: #{$size * $count_cell_height}px;
+  margin: 20px 0;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    left: -1px;
+  }
+
+  &:before {
+    right: 0;
+    border-top: 1px solid $yellow;
+    box-shadow: grid_horizontal($size, $count_cell_width);
+  }
+
+  &:after {
+    bottom: 0;
+    border-left: 1px solid $yellow;
+    box-shadow: grid_vertical($size, $count_cell_height);
+  }
+
+  &--item {
+    position: relative;
+    width: #{$size}px;
+    height: #{$size}px;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      max-width: 98%;
+      max-height: 98%;
+    }
+  }
+}

@@ -4,9 +4,9 @@ import conversation from './conversation';
 import book from './book';
 
 const reducers = combineReducers({
-  general,
-  conversation,
-  book
+	general,
+	conversation,
+	book
 });
 
 export default reducers;

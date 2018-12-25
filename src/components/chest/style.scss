@@ -1,0 +1,65 @@
+@import '../../style/variables';
+@import '../../style/classes';
+
+.chest {
+  &--close,
+  &--target {
+    z-index: 600;
+    position: absolute;
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+
+    & > img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &--target {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  &--close {
+    left: auto;
+    bottom: auto;
+    top: 10px;
+    right: 10px;
+
+    & > img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &--modal {
+    @extend %modal-class-decor;
+    z-index: 999;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    max-width: 900px;
+  }
+
+  &--content {
+    flex-basis: 33%;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &--title {
+    color: $yellow;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &--bg {
+    @extend %modal-bg-class;
+  }
+}

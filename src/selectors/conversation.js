@@ -1,4 +1,4 @@
-import { createGetSelector } from "reselect-immutable-helpers";
+import { createGetSelector } from 'reselect-immutable-helpers';
 
 export const getConversation = createGetSelector(state => state, 'conversation');
 
