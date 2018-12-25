@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
+  "main": "./app/server.js",
   "scripts": {
     "start": "node ./app/server.js",
     "start:production": "npm run -s serve",
