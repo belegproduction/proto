@@ -30,7 +30,8 @@
     "preact-cli": "^2.1.0",
     "preact-render-spy": "^1.2.1",
     "redux-devtools-extension": "^2.13.7",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "webpack-spritesmith": "^0.5.4"
   },
   "dependencies": {
     "koa": "^2.6.1",
