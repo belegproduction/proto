@@ -17,16 +17,22 @@ const book = handleActions({
 		});
 	},
 	[ADD_TIP_TO_TASK]: (state, { payload: task }) => {
+		let displayTask = state.get('displayTask');
 		return state.merge({
 			tasks: state.get('tasks').map((_task) => {
 				if(_task.name === task.name) {
-          return {
-          	..._task,
-          	tips: [..._task.tips, task.tip]
-					};
+					let nextTask = {
+            ..._task,
+            tips: [..._task.tips, task.tip]
+          };
+					if(nextTask.name === displayTask.name) {
+            displayTask = nextTask;
+					}
+          return nextTask;
 				}
 				return _task;
-			})
+			}),
+      displayTask
 		});
 	},
   [CHANGE_STATUS_TASK]: (state, { payload: task }) => {

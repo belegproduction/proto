@@ -15,7 +15,7 @@ const Chest = ({ open, inventory, tasks, displayTask, handlerOpenChest, handlerC
       </div>
       <div className={style['chest--content']}>
         <div className={style['chest--title']}>Список заданий</div>
-        <TaskList tasks={tasks} handlerClick={handlerDisplayTask}/>
+        <TaskList tasks={tasks} handlerClick={handlerDisplayTask} displayTask={displayTask} />
       </div>
 			{displayTask && <div className={style['chest--content']}>
         <div className={style['chest--title']}>{displayTask.title}</div>

@@ -138,7 +138,7 @@ module.exports = exports['default'];
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"location--type-firstLocation":"location--type-firstLocation__FUn3K","Vasia":"Vasia__276hS","secondLocation":"secondLocation__1L_4H","location--type-secondLocation":"location--type-secondLocation__9bChW","Sokol":"Sokol__2HG3b","firstLocation":"firstLocation__2Wicp","location":"location__dF__E"};
+module.exports = {"location--type-firstLocation":"location--type-firstLocation__3l4S8","Vasia":"Vasia__3aWyP","secondLocation":"secondLocation__2AT-1","location--type-secondLocation":"location--type-secondLocation__sxnew","Sokol":"Sokol__16riw","firstLocation":"firstLocation__Fp9IR","location":"location__3MKUz"};
 
 /***/ }),
 
@@ -146,7 +146,7 @@ module.exports = {"location--type-firstLocation":"location--type-firstLocation__
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"conversation":"conversation__2p93p","conversation--bg":"conversation--bg__77dyo","conversation--content":"conversation--content__1WJNC","conversation--text":"conversation--text__2db3G","conversation--answers":"conversation--answers__2-jfb","conversation--avatar":"conversation--avatar__3QseV","conversation--hr":"conversation--hr__2J23y","conversation--name":"conversation--name__qiA73","conversation--panel":"conversation--panel__3Sieh","conversation--button-disabled":"conversation--button-disabled__1klli"};
+module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conversation--bg__1GN0n","conversation--answers":"conversation--answers__2I6Qb","conversation--content":"conversation--content__1vt9r","conversation--text":"conversation--text__-mA6T","conversation--avatar":"conversation--avatar__2aZM9","conversation--hr":"conversation--hr__2PzA8","conversation--name":"conversation--name__1cuZh","conversation--panel":"conversation--panel__1Z4sp","conversation--button-disabled":"conversation--button-disabled__3xhhD"};
 
 /***/ }),
 
@@ -154,7 +154,7 @@ module.exports = {"conversation":"conversation__2p93p","conversation--bg":"conve
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"arrow":"arrow__f2CUY"};
+module.exports = {"arrow":"arrow__2_DE2"};
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = {"arrow":"arrow__f2CUY"};
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"task-description":"task-description__2u8_2","task-description--hr":"task-description--hr__3jN_r","task-description--tip":"task-description--tip__kiYKf"};
+module.exports = {"task-description":"task-description__28FzF","task-description--hr":"task-description--hr__3BYBx","task-description--tip":"task-description--tip__hBTbM"};
 
 /***/ }),
 
@@ -5945,15 +5945,21 @@ var book = handleActions((book__handleActions = {}, book__handleActions[ADD_TASK
 }, book__handleActions[ADD_TIP_TO_TASK] = function (state, _ref2) {
   var task = _ref2.payload;
 
+  var displayTask = state.get('displayTask');
   return state.merge({
     tasks: state.get('tasks').map(function (_task) {
       if (_task.name === task.name) {
-        return book__extends({}, _task, {
+        var nextTask = book__extends({}, _task, {
           tips: [].concat(_task.tips, [task.tip])
         });
+        if (nextTask.name === displayTask.name) {
+          displayTask = nextTask;
+        }
+        return nextTask;
       }
       return _task;
-    })
+    }),
+    displayTask: displayTask
   });
 }, book__handleActions[CHANGE_STATUS_TASK] = function (state, _ref3) {
   var task = _ref3.payload;
@@ -6254,14 +6260,15 @@ var task_list_style_default = /*#__PURE__*/__webpack_require__.n(task_list_style
 
 var task_list_TaskList = function TaskList(_ref) {
   var tasks = _ref.tasks,
-      handlerClick = _ref.handlerClick;
+      handlerClick = _ref.handlerClick,
+      displayTask = _ref.displayTask;
   return Object(preact_min["h"])(
     'div',
     { className: task_list_style_default.a['task-list'] },
     Array.isArray(tasks) && tasks.length ? tasks.map(function (task, idx) {
       return Object(preact_min["h"])(
         'div',
-        { className: task_list_style_default.a['task-list--item'], onClick: function onClick() {
+        { className: task_list_style_default.a['task-list--item'] + ' ' + (displayTask && displayTask.name === task.name ? task_list_style_default.a['task-list--item-actived'] : ''), onClick: function onClick() {
             return handlerClick(task);
           } },
         Object(preact_min["h"])(
@@ -6365,7 +6372,7 @@ var chest_Chest = function Chest(_ref) {
           { className: chest_style_default.a['chest--title'] },
           '\u0421\u043F\u0438\u0441\u043E\u043A \u0437\u0430\u0434\u0430\u043D\u0438\u0439'
         ),
-        Object(preact_min["h"])(task_list, { tasks: tasks, handlerClick: handlerDisplayTask })
+        Object(preact_min["h"])(task_list, { tasks: tasks, handlerClick: handlerDisplayTask, displayTask: displayTask })
       ),
       displayTask && Object(preact_min["h"])(
         'div',
@@ -12748,7 +12755,7 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"character":"character__37LER","character--name":"character--name__2HPnb"};
+module.exports = {"character":"character__3WXLR","character--name":"character--name__12929"};
 
 /***/ }),
 
@@ -12890,7 +12897,7 @@ function uncamelize(string) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"message":"message__2Uupe","message--bg":"message--bg__1PsiL","message--text":"message--text__2YS6l","message--out":"message--out__Z2dUX"};
+module.exports = {"message":"message__2EYcP","message--bg":"message--bg__1T_ah","message--text":"message--text__1Fsy5","message--out":"message--out__20Gv1"};
 
 /***/ }),
 
@@ -12898,7 +12905,7 @@ module.exports = {"message":"message__2Uupe","message--bg":"message--bg__1PsiL",
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"inventory":"inventory__y0VWQ","inventory--item":"inventory--item__djb2C"};
+module.exports = {"inventory":"inventory__UfAL5","inventory--item":"inventory--item__a8wD_"};
 
 /***/ }),
 
@@ -12906,7 +12913,7 @@ module.exports = {"inventory":"inventory__y0VWQ","inventory--item":"inventory--i
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"chest--modal":"chest--modal__3_KMW","chest--bg":"chest--bg__1SDZn","chest--close":"chest--close__j-rxT","chest--target":"chest--target__1Dzei","chest--content":"chest--content__2OyYf","chest--title":"chest--title__2tCwb"};
+module.exports = {"chest--modal":"chest--modal__pxjOt","chest--bg":"chest--bg__wvJv6","chest--close":"chest--close__2TAFp","chest--target":"chest--target__1slf3","chest--content":"chest--content__1eSSp","chest--title":"chest--title__2tpie"};
 
 /***/ }),
 
@@ -13077,7 +13084,7 @@ var createHasSelector = exports.createHasSelector = function createHasSelector(s
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"task-list--empty":"task-list--empty__3fStM","task-list--item":"task-list--item____x0-","task-list--status":"task-list--status__2oqOr","task-list--name":"task-list--name__tEARy","task-list--index":"task-list--index__1-4Ae"};
+module.exports = {"task-list--item":"task-list--item__3WVW4","task-list--item-actived":"task-list--item-actived__1e1rB","task-list":"task-list__2TtiR","task-list--empty":"task-list--empty__2nqWe","task-list--status":"task-list--status__1Ru9E","task-list--name":"task-list--name__3euft","task-list--index":"task-list--index__clTqV"};
 
 /***/ }),
 
@@ -13085,7 +13092,7 @@ module.exports = {"task-list--empty":"task-list--empty__3fStM","task-list--item"
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"game":"game__2fZpQ"};
+module.exports = {"game":"game__2YIVz"};
 
 /***/ }),
 

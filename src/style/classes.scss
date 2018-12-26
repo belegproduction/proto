@@ -1,3 +1,5 @@
+@import './variables';
+
 %modal-class {
   @extend %modal-class-decor;
   z-index: 999;
@@ -28,4 +30,28 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
+}
+
+%item {
+  transition-property: color, box-shadow;
+  transition-duration: 200ms;
+  padding: 10px;
+  border: 1px solid #947d35;
+  box-shadow: -1px -1px 0 #aa9d70;
+  cursor: pointer;
+  color: rgba(255, 255, 255, .7);
+  background: #5c5836;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    @extend %item-hover;
+  }
+}
+
+%item-hover {
+  box-shadow: 0 1px 1px #aa9d70;
+  color: rgba(255, 255, 255, 1);
 }
