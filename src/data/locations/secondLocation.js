@@ -6,11 +6,10 @@ export default {
 			available: true
 		}
 	],
-	nextLocations: [
-		{
-			name: 'firstLocation',
-			available: true,
-			type: 'bottom'
-		}
-	]
+	nextLocations: null,
+  backLocation: {
+    name: 'firstLocation',
+    available: true,
+    type: 'bottom'
+  }
 };

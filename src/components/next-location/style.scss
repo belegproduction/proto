@@ -1,0 +1,18 @@
+@import '../../style/variables';
+
+.next-location {
+  //animation-name: flicker;
+  //animation-duration: 2s;
+  //animation-fill-mode: forwards;
+  //animation-iteration-count: infinite;
+  pointer-events: all;
+  cursor: pointer;
+  fill: transparent;
+  stroke: $yellow-light;
+  stroke-width: 3;
+}
+
+//@keyframes flicker {
+//  0%   {stroke-width: 3}
+//  100% {stroke-width: 2}
+//}

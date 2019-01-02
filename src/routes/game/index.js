@@ -6,6 +6,7 @@ import Location from '../../components/location';
 import Conversation from '../../components/conversation';
 import Chest from '../../components/chest';
 import Message from '../../components/message';
+import BackLocation from '../../components/back-location';
 
 import { addObjectToInventory, removeObjectToInventory, changeLocation, openChest, closeChest, setMessage  } from '../../actions/general';
 import { closeDialog, nextDialog, saveCharacterToHistory, startDialog } from '../../actions/conversation';
@@ -121,6 +122,8 @@ class Game extends Component {
 						 handlerCloseChest={handlerCloseChest}
              handlerDisplayTask={handlerDisplayTask}
       />
+      
+      {locationActive.backLocation && <BackLocation location={locationActive.backLocation} handlerOnClick={handlerChangeLocation} />}
       {message && <Message message={message}/>}
   	</div>);
   }

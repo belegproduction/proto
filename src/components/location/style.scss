@@ -1,3 +1,5 @@
+@import '../../style/variables';
+
 @import "firstLocation/style";
 @import "secondLocation/style";
 
@@ -9,4 +11,16 @@
   //right: 0;
   //left: 0;
   //bottom: 0;
+
+  &--mask {
+    pointer-events: none;
+    z-index: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: drop-shadow( -5px -5px 5px $yellow-light);
+    filter: drop-shadow( -5px -5px 5px $yellow-light);
+  }
 }
