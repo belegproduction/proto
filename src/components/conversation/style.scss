@@ -14,16 +14,32 @@
   &--text {
     color: $yellow;
     font-size: 18px;
+
+    span {
+      color: $white-light;
+      font-size: 15px;
+    }
   }
 
   &--answers {
     list-style: none;
     padding: 0;
     margin: 20px 0;
+  }
 
-    & > li {
-      @extend %item;
-    }
+  &--answer {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &--index-answer {
+    color: $white-light;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  &--text-answer {
+    @extend %item;
   }
 
   &--avatar {

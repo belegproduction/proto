@@ -3,18 +3,13 @@ import './style.scss';
 import { ADD_TASK, ADD_OBJECT_TO_INVENTORY, ADD_TIP_TO_TASK, CHANGE_STATUS_TASK, REMOVE_OBJECT_TO_INVENTORY } from '../constants/actions';
 import { DONE, FAILED } from '../constants/status-task';
 
-// let gameElement = '.game';
-// if (typeof window !== "undefined") {
-//   gameElement = document.getElementById("game");
-// }
-
 const createNoty = (text) => {
   new Noty({
     text,
     layout: 'topCenter',
-    timeout: 3000
+    timeout: 5000
   }).show();
-}
+};
 
 const notyMiddleware = store => next => action => {
   const { type, payload } = action;

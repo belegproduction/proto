@@ -4,13 +4,21 @@ const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog
 	<div>
 		<div className={style.conversation}>
 			<div className={style['conversation--content']}>
-				<div className={style['conversation--text']}>{dialog.text}</div>
+				<div className={style['conversation--text']}>
+					<span>{character.name} {dialog.context ? `(${dialog.context})` : ''}:</span> {dialog.text}
+				</div>
 				<ul className={style['conversation--answers']}>
 					{Array.isArray(dialog.answers) && dialog.answers
 						.filter(checkConditions)
-						.map(answer => (<li onClick={() => handlerNextDialog(answer)}>
-							{answer.text}
-						</li>))}
+						.map((answer, index) => (
+							<li className={style['conversation--answer']}>
+								<div className={style['conversation--index-answer']}>
+									{index + 1}
+								</div>
+								<div className={style['conversation--text-answer']} onClick={() => handlerNextDialog(answer)}>
+									{answer.text}
+								</div>
+							</li>))}
 				</ul>
 			</div>
 			<div className={style['conversation--avatar']}>

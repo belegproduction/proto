@@ -490,7 +490,7 @@ module.exports = {"location--type-firstLocation":"location--type-firstLocation__
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conversation--bg__1GN0n","conversation--answers":"conversation--answers__2I6Qb","conversation--content":"conversation--content__1vt9r","conversation--text":"conversation--text__-mA6T","conversation--avatar":"conversation--avatar__2aZM9","conversation--hr":"conversation--hr__2PzA8","conversation--name":"conversation--name__1cuZh","conversation--panel":"conversation--panel__1Z4sp","conversation--button-disabled":"conversation--button-disabled__3xhhD"};
+module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conversation--bg__1GN0n","conversation--text-answer":"conversation--text-answer__2MHGj","conversation--content":"conversation--content__1vt9r","conversation--text":"conversation--text__-mA6T","conversation--answers":"conversation--answers__2I6Qb","conversation--answer":"conversation--answer__xOqeQ","conversation--index-answer":"conversation--index-answer__31XR2","conversation--avatar":"conversation--avatar__2aZM9","conversation--hr":"conversation--hr__2PzA8","conversation--name":"conversation--name__1cuZh","conversation--panel":"conversation--panel__1Z4sp","conversation--button-disabled":"conversation--button-disabled__3xhhD"};
 
 /***/ }),
 
@@ -5418,9 +5418,9 @@ function createConnect() {
 
 var connect = createConnect();
 
-var index = { Provider: preact_redux_esm_Provider, connect: connect, connectAdvanced: connectAdvanced };
+var preact_redux_esm_index = { Provider: preact_redux_esm_Provider, connect: connect, connectAdvanced: connectAdvanced };
 
-/* harmony default export */ var preact_redux_esm = (index);
+/* harmony default export */ var preact_redux_esm = (preact_redux_esm_index);
 //# sourceMappingURL=preact-redux.esm.js.map
 // EXTERNAL MODULE: ../node_modules/redux-devtools-extension/index.js
 var redux_devtools_extension = __webpack_require__("yP4S");
@@ -6071,11 +6071,13 @@ var FAILED = 'Проваленое';
 	dialogs: {
 		offerTask: {
 			text: 'Привет, не хочешь выручить земляка?',
+			context: 'с надеждой',
 			close: true,
 			answers: [{
 				text: 'Ближе к делу',
 				character: {
 					text: 'Есть стражник в городе, его зовут Сокол. Он должен мне кое что передать. Поговори с ним, скажи что от Васи. Потом сразу сюда, я тебя буду ждать сдесь. Даже не вздумай убежать с моей поссылкой. Если всё пройдет гладко за мной не заржавеет',
+					context: 'радосно',
 					answers: [{
 						text: 'Договорились, скоро буду',
 						close: true,
@@ -6095,6 +6097,7 @@ var FAILED = 'Проваленое';
 				text: 'Ух ты, этот комок шерсти может еще разговаривать. Не хочешь меня выручить, есть пару золотых для будущего друга?',
 				character: {
 					text: 'Есть, подойди поближе',
+					context: 'со злостью',
 					close: true,
 					message: 'Вы были убиты и изнасилованы!'
 				}
@@ -6102,6 +6105,7 @@ var FAILED = 'Проваленое';
 		},
 		default: {
 			text: 'Есть новости для меня?',
+			context: 'с надеждой',
 			close: true,
 			answers: [{
 				conditions: {
@@ -6376,16 +6380,11 @@ var middleware_style_default = /*#__PURE__*/__webpack_require__.n(middleware_sty
 
 
 
-// let gameElement = '.game';
-// if (typeof window !== "undefined") {
-//   gameElement = document.getElementById("game");
-// }
-
 var noty_createNoty = function createNoty(text) {
   new noty_default.a({
     text: text,
     layout: 'topCenter',
-    timeout: 3000
+    timeout: 5000
   }).show();
 };
 
@@ -6455,11 +6454,6 @@ var character_Character = function Character(_ref) {
 		{ className: character_style_default.a.character + ' ' + character_style_default.a.character + '--how-' + name + ' ' + className, onClick: function onClick() {
 				return handlerClick(name);
 			} },
-		Object(preact_min["h"])(
-			'div',
-			{ className: character_style_default.a['character--name'] },
-			name
-		),
 		Object(preact_min["h"])('img', { src: '/assets/characters/' + name.toLowerCase() + '.png', alt: name })
 	);
 };
@@ -6557,18 +6551,36 @@ var conversation_Conversation = function Conversation(_ref) {
 				Object(preact_min["h"])(
 					'div',
 					{ className: conversation_style_default.a['conversation--text'] },
+					Object(preact_min["h"])(
+						'span',
+						null,
+						character.name,
+						' ',
+						dialog.context ? '(' + dialog.context + ')' : '',
+						':'
+					),
+					' ',
 					dialog.text
 				),
 				Object(preact_min["h"])(
 					'ul',
 					{ className: conversation_style_default.a['conversation--answers'] },
-					Array.isArray(dialog.answers) && dialog.answers.filter(checkConditions).map(function (answer) {
+					Array.isArray(dialog.answers) && dialog.answers.filter(checkConditions).map(function (answer, index) {
 						return Object(preact_min["h"])(
 							'li',
-							{ onClick: function onClick() {
-									return handlerNextDialog(answer);
-								} },
-							answer.text
+							{ className: conversation_style_default.a['conversation--answer'] },
+							Object(preact_min["h"])(
+								'div',
+								{ className: conversation_style_default.a['conversation--index-answer'] },
+								index + 1
+							),
+							Object(preact_min["h"])(
+								'div',
+								{ className: conversation_style_default.a['conversation--text-answer'], onClick: function onClick() {
+										return handlerNextDialog(answer);
+									} },
+								answer.text
+							)
 						);
 					})
 				)
@@ -13157,7 +13169,7 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"character":"character__3WXLR","character--name":"character--name__12929"};
+module.exports = {"character":"character__3WXLR"};
 
 /***/ }),
 
