@@ -63,12 +63,12 @@ class Game extends Component {
       handlerSetMessage(dialog.message);
     }
     handlerCloseDialog();
-  }
+  };
   
   checkConditions = (answer) => {
-    const {conditions} = answer;
+    const {conditions, forceDisplay} = answer;
     const {inventory, tasks, actions} = this.props;
-    if(!conditions) return true;
+    if(!conditions || forceDisplay) return true;
   
     if(Array.isArray(conditions.inventory) &&
       conditions.inventory.length &&

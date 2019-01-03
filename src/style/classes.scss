@@ -52,6 +52,12 @@
   }
 }
 
+%item-disabled {
+  position: relative;
+  pointer-events: none;
+  opacity: .5;
+}
+
 %item-hover {
   box-shadow: 0 1px 1px #aa9d70;
   color: rgba(255, 255, 255, 1);

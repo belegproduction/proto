@@ -15,23 +15,23 @@ const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog
 								<div className={style['conversation--index-answer']}>
 									{index + 1}
 								</div>
-								<div className={style['conversation--text-answer']} onClick={() => handlerNextDialog(answer)}>
-									{answer.text}
+								<div className={`${style['conversation--text-answer']} ${answer.forceDisplay ? style['conversation--text-answer-disabled'] : ''}`} onClick={() => handlerNextDialog(answer)}>
+									{answer.text} {answer.forceDisplay && answer.forceDisplayMessage ? <span>{`(${answer.forceDisplayMessage})`}</span> : ''}
 								</div>
 							</li>))}
+						{dialog.close && <li className={style['conversation--answer']}>
+							<div className={style['conversation--index-answer']}>
+								-
+							</div>
+							<div className={style['conversation--text-answer']} onClick={handlerCloseDialog}>
+								(Покинуть диалог)
+							</div>
+						</li>}
 				</ul>
 			</div>
 			<div className={style['conversation--avatar']}>
 				<img src={`/assets/characters/avatar-${character.name.toLowerCase()}.png`} alt={name} />
 				<div className={style['conversation--name']}>{character.name}</div>
-			</div>
-			<hr className={style['conversation--hr']} />
-			<div className={style['conversation--panel']}>
-				<button type="button" className={dialog.close ? '' : style['conversation--button-disabled']}
-					onClick={handlerCloseDialog}
-				>
-					<img src="/assets/conversation/forward.svg" alt="Покинуть диалог" title="Покинуть диалог" />
-				</button>
 			</div>
 		</div>
 		<div className={style['conversation--bg']} />

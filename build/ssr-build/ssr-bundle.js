@@ -490,7 +490,7 @@ module.exports = {"location--type-firstLocation":"location--type-firstLocation__
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conversation--bg__1GN0n","conversation--text-answer":"conversation--text-answer__2MHGj","conversation--content":"conversation--content__1vt9r","conversation--text":"conversation--text__-mA6T","conversation--answers":"conversation--answers__2I6Qb","conversation--answer":"conversation--answer__xOqeQ","conversation--index-answer":"conversation--index-answer__31XR2","conversation--avatar":"conversation--avatar__2aZM9","conversation--hr":"conversation--hr__2PzA8","conversation--name":"conversation--name__1cuZh","conversation--panel":"conversation--panel__1Z4sp","conversation--button-disabled":"conversation--button-disabled__3xhhD"};
+module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conversation--bg__1GN0n","conversation--text-answer":"conversation--text-answer__2MHGj","conversation--text-answer-disabled":"conversation--text-answer-disabled__mF918","conversation--content":"conversation--content__1vt9r","conversation--text":"conversation--text__-mA6T","conversation--answers":"conversation--answers__2I6Qb","conversation--answer":"conversation--answer__xOqeQ","conversation--index-answer":"conversation--index-answer__31XR2","conversation--avatar":"conversation--avatar__2aZM9","conversation--name":"conversation--name__1cuZh","conversation--button-disabled":"conversation--button-disabled__3xhhD"};
 
 /***/ }),
 
@@ -6145,6 +6145,8 @@ var answerParcel = {
 			status: NEW
 		}]
 	},
+	forceDisplay: true,
+	forceDisplayMessage: 'Нужно имееть задание от Васи!',
 	text: 'Я от Васи за поссылкой',
 	inventory: {
 		object: {
@@ -6531,8 +6533,6 @@ var conversation_style_default = /*#__PURE__*/__webpack_require__.n(conversation
 
 
 
-var conversation__ref2 = Object(preact_min["h"])('img', { src: '/assets/conversation/forward.svg', alt: '\u041F\u043E\u043A\u0438\u043D\u0443\u0442\u044C \u0434\u0438\u0430\u043B\u043E\u0433', title: '\u041F\u043E\u043A\u0438\u043D\u0443\u0442\u044C \u0434\u0438\u0430\u043B\u043E\u0433' });
-
 var conversation_Conversation = function Conversation(_ref) {
 	var character = _ref.character,
 	    dialog = _ref.dialog,
@@ -6576,13 +6576,33 @@ var conversation_Conversation = function Conversation(_ref) {
 							),
 							Object(preact_min["h"])(
 								'div',
-								{ className: conversation_style_default.a['conversation--text-answer'], onClick: function onClick() {
+								{ className: conversation_style_default.a['conversation--text-answer'] + ' ' + (answer.forceDisplay ? conversation_style_default.a['conversation--text-answer-disabled'] : ''), onClick: function onClick() {
 										return handlerNextDialog(answer);
 									} },
-								answer.text
+								answer.text,
+								' ',
+								answer.forceDisplay && answer.forceDisplayMessage ? Object(preact_min["h"])(
+									'span',
+									null,
+									'(' + answer.forceDisplayMessage + ')'
+								) : ''
 							)
 						);
-					})
+					}),
+					dialog.close && Object(preact_min["h"])(
+						'li',
+						{ className: conversation_style_default.a['conversation--answer'] },
+						Object(preact_min["h"])(
+							'div',
+							{ className: conversation_style_default.a['conversation--index-answer'] },
+							'-'
+						),
+						Object(preact_min["h"])(
+							'div',
+							{ className: conversation_style_default.a['conversation--text-answer'], onClick: handlerCloseDialog },
+							'(\u041F\u043E\u043A\u0438\u043D\u0443\u0442\u044C \u0434\u0438\u0430\u043B\u043E\u0433)'
+						)
+					)
 				)
 			),
 			Object(preact_min["h"])(
@@ -6593,18 +6613,6 @@ var conversation_Conversation = function Conversation(_ref) {
 					'div',
 					{ className: conversation_style_default.a['conversation--name'] },
 					character.name
-				)
-			),
-			Object(preact_min["h"])('hr', { className: conversation_style_default.a['conversation--hr'] }),
-			Object(preact_min["h"])(
-				'div',
-				{ className: conversation_style_default.a['conversation--panel'] },
-				Object(preact_min["h"])(
-					'button',
-					{ type: 'button', className: dialog.close ? '' : conversation_style_default.a['conversation--button-disabled'],
-						onClick: handlerCloseDialog
-					},
-					conversation__ref2
 				)
 			)
 		),
@@ -7044,13 +7052,14 @@ var game_Game = function (_Component) {
       }
       handlerCloseDialog();
     }, _this.checkConditions = function (answer) {
-      var conditions = answer.conditions;
+      var conditions = answer.conditions,
+          forceDisplay = answer.forceDisplay;
       var _this$props3 = _this.props,
           inventory = _this$props3.inventory,
           tasks = _this$props3.tasks,
           actions = _this$props3.actions;
 
-      if (!conditions) return true;
+      if (!conditions || forceDisplay) return true;
 
       if (Array.isArray(conditions.inventory) && conditions.inventory.length && !conditions.inventory.every(function (object) {
         return inventory.find(function (_object) {

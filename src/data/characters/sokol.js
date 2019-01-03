@@ -7,6 +7,8 @@ const answerParcel = {
 			status: NEW
 		}]
 	},
+  forceDisplay: true,
+  forceDisplayMessage: 'Нужно имееть задание от Васи!',
 	text: 'Я от Васи за поссылкой',
 	inventory: {
 		object: {
@@ -42,6 +44,7 @@ export default {
 		default: {
 			text: 'Ты кто такой? Я тебя раньше не видел.',
 			close: true,
+			isTarget: true,
 			answers: [
 				answerParcel,
 				{
