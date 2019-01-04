@@ -1,15 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from './reducers';
-import notyMiddleware from './middleware/noty';
-import dialogMiddleware from './middleware/dialog';
+let configStore;
 
-export default function configureStore(initialState) {
-	return createStore(
-		rootReducer,
-		initialState,
-    composeWithDevTools(
-      applyMiddleware(notyMiddleware, dialogMiddleware),
-    )
-	);
+if(process.env.NODE_ENV === "development") {
+  configStore = require('./configureStoreDev').default;
+} else {
+  configStore = require('./configureStoreProd').default;
 }
+
+export default configStore;
+

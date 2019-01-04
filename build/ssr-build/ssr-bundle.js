@@ -93,32 +93,38 @@ module.exports = {"back-location":"back-location__1Z1Y1"};
 
 /***/ }),
 
-/***/ "5D9O":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "5QES":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) {
-  var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element') || 0xeac7;
-
-  var isValidElement = function isValidElement(object) {
-    return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = require('./factoryWithTypeCheckers')(isValidElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__("wVGV")();
-}
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return CHANGE_LOCATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return START_DIALOG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return NEXT_DIALOG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CLOSE_DIALOG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ADD_TASK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return CHANGE_STATUS_TASK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ADD_TIP_TO_TASK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return SAVE_CHARACTER_TO_HISTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ADD_OBJECT_TO_INVENTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return REMOVE_OBJECT_TO_INVENTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return OPEN_CHEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return CLOSE_CHEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return DISPLAY_TASK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return SET_MESSAGE; });
+var CHANGE_LOCATION = 'CHANGE_LOCATION';
+var START_DIALOG = 'START_DIALOG';
+var NEXT_DIALOG = 'NEXT_DIALOG';
+var CLOSE_DIALOG = 'CLOSE_DIALOG';
+var ADD_TASK = 'ADD_TASK';
+var CHANGE_STATUS_TASK = 'CHANGE_STATUS_TASK';
+var ADD_TIP_TO_TASK = 'ADD_TIP_TO_TASK';
+var SAVE_CHARACTER_TO_HISTORY = 'SAVE_CHARACTER_TO_HISTORY';
+var ADD_OBJECT_TO_INVENTORY = 'ADD_OBJECT_TO_INVENTORY';
+var REMOVE_OBJECT_TO_INVENTORY = 'REMOVE_OBJECT_TO_INVENTORY';
+var OPEN_CHEST = 'OPEN_CHEST';
+var CLOSE_CHEST = 'CLOSE_CHEST';
+var DISPLAY_TASK = 'DISPLAY_TASK';
+var SET_MESSAGE = 'SET_MESSAGE';
 
 /***/ }),
 
@@ -171,310 +177,13 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ "85nt":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "8B3Z":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, '__esModule', {
-	value: true
+/* harmony default export */ __webpack_exports__["a"] = (function (value) {
+  return typeof value === 'function';
 });
-
-var _slicedToArray = function () {
-	function sliceIterator(arr, i) {
-		var _arr = [];var _n = true;var _d = false;var _e = undefined;try {
-			for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-				_arr.push(_s.value);if (i && _arr.length === i) break;
-			}
-		} catch (err) {
-			_d = true;_e = err;
-		} finally {
-			try {
-				if (!_n && _i['return']) _i['return']();
-			} finally {
-				if (_d) throw _e;
-			}
-		}return _arr;
-	}return function (arr, i) {
-		if (Array.isArray(arr)) {
-			return arr;
-		} else if (Symbol.iterator in Object(arr)) {
-			return sliceIterator(arr, i);
-		} else {
-			throw new TypeError('Invalid attempt to destructure non-iterable instance');
-		}
-	};
-}();
-
-var _extends = Object.assign || function (target) {
-	for (var i = 1; i < arguments.length; i++) {
-		var source = arguments[i];for (var key in source) {
-			if (Object.prototype.hasOwnProperty.call(source, key)) {
-				target[key] = source[key];
-			}
-		}
-	}return target;
-};
-
-var _createClass = function () {
-	function defineProperties(target, props) {
-		for (var i = 0; i < props.length; i++) {
-			var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ('value' in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-		}
-	}return function (Constructor, protoProps, staticProps) {
-		if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	};
-}();
-
-var _get = function get(_x, _x2, _x3) {
-	var _again = true;_function: while (_again) {
-		var object = _x,
-		    property = _x2,
-		    receiver = _x3;_again = false;if (object === null) object = Function.prototype;var desc = Object.getOwnPropertyDescriptor(object, property);if (desc === undefined) {
-			var parent = Object.getPrototypeOf(object);if (parent === null) {
-				return undefined;
-			} else {
-				_x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;
-			}
-		} else if ('value' in desc) {
-			return desc.value;
-		} else {
-			var getter = desc.get;if (getter === undefined) {
-				return undefined;
-			}return getter.call(receiver);
-		}
-	}
-};
-
-function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { 'default': obj };
-}
-
-function _toConsumableArray(arr) {
-	if (Array.isArray(arr)) {
-		for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-			arr2[i] = arr[i];
-		}return arr2;
-	} else {
-		return Array.from(arr);
-	}
-}
-
-function _classCallCheck(instance, Constructor) {
-	if (!(instance instanceof Constructor)) {
-		throw new TypeError('Cannot call a class as a function');
-	}
-}
-
-function _inherits(subClass, superClass) {
-	if (typeof superClass !== 'function' && superClass !== null) {
-		throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-	}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var _react = __webpack_require__("eW0v");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__("5D9O");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var ImageMapper = function (_Component) {
-	_inherits(ImageMapper, _Component);
-
-	function ImageMapper(props) {
-		var _this = this;
-
-		_classCallCheck(this, ImageMapper);
-
-		_get(Object.getPrototypeOf(ImageMapper.prototype), 'constructor', this).call(this, props);
-		['drawrect', 'drawcircle', 'drawpoly', 'initCanvas'].forEach(function (f) {
-			return _this[f] = _this[f].bind(_this);
-		});
-		var absPos = { position: 'absolute', top: 0, left: 0 };
-		this.styles = {
-			container: { position: 'relative' },
-			canvas: _extends({}, absPos, { pointerEvents: 'none', zIndex: 2 }),
-			img: _extends({}, absPos, { zIndex: 1, userSelect: 'none' }),
-			map: props.onClick && { cursor: 'pointer' } || undefined
-		};
-	}
-
-	_createClass(ImageMapper, [{
-		key: 'componentDidUpdate',
-		value: function componentDidUpdate(prevProps, prevState) {
-			// only update chart if the data has changed
-			if (prevProps.width !== this.props.width) {
-				// re-draw canvas with the new width
-				this.initCanvas();
-			}
-		}
-	}, {
-		key: 'drawrect',
-		value: function drawrect(coord) {
-			coord = coord.split(',');
-			var _coord = coord;
-
-			var _coord2 = _slicedToArray(_coord, 4);
-
-			var left = _coord2[0];
-			var top = _coord2[1];
-			var right = _coord2[2];
-			var bot = _coord2[3];
-
-			this.ctx.strokeRect(left, top, right - left, bot - top);
-			this.ctx.fillRect(left, top, right - left, bot - top);
-		}
-	}, {
-		key: 'drawcircle',
-		value: function drawcircle(coords) {
-			coords = coords.split(',');
-			this.ctx.beginPath();
-			this.ctx.arc(coords[0], coords[1], coords[2], 0, 2 * Math.PI);
-			this.ctx.closePath();
-			this.ctx.stroke();
-			this.ctx.fill();
-		}
-	}, {
-		key: 'drawpoly',
-		value: function drawpoly(coords) {
-			var _this2 = this;
-
-			coords = coords.split(',').reduce(function (a, v, i, s) {
-				return i % 2 ? a : [].concat(_toConsumableArray(a), [s.slice(i, i + 2)]);
-			}, []);
-			this.ctx.beginPath();
-			var first = coords.unshift();
-			this.ctx.moveTo(first[0], first[1]);
-			coords.forEach(function (c) {
-				return _this2.ctx.lineTo(c[0], c[1]);
-			});
-			this.ctx.closePath();
-			this.ctx.stroke();
-			this.ctx.fill();
-		}
-	}, {
-		key: 'initCanvas',
-		value: function initCanvas() {
-			if (this.props.width) this.img.width = this.props.width;
-			if (this.props.height) this.img.height = this.props.height;
-			this.canvas.width = this.props.width || this.img.clientWidth;
-			this.canvas.height = this.props.height || this.img.clientHeight;
-			this.container.style.width = (this.props.width || this.img.clientWidth) + 'px';
-			this.container.style.height = (this.props.height || this.img.clientHeight) + 'px';
-			this.ctx = this.canvas.getContext('2d');
-			this.ctx.fillStyle = this.props.fillColor;
-			this.ctx.strokeStyle = this.props.strokeColor;
-			this.ctx.lineWidth = this.props.lineWidth;
-			if (this.props.onLoad) this.props.onLoad();
-		}
-	}, {
-		key: 'hoverOn',
-		value: function hoverOn(area, index, event) {
-			var shape = event.target.getAttribute('shape');
-			if (this.props.active && this['draw' + shape]) this['draw' + shape](event.target.getAttribute('coords'));
-			if (this.props.onMouseEnter) this.props.onMouseEnter(area, index, event);
-		}
-	}, {
-		key: 'hoverOff',
-		value: function hoverOff(area, index, event) {
-			if (this.props.active) this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-			if (this.props.onMouseLeave) this.props.onMouseLeave(area, index, event);
-		}
-	}, {
-		key: 'click',
-		value: function click(area, index, event) {
-			if (this.props.onClick) {
-				event.preventDefault();
-				this.props.onClick(area, index, event);
-			}
-		}
-	}, {
-		key: 'renderAreas',
-		value: function renderAreas() {
-			var _this3 = this;
-
-			var _props = this.props;
-			var imgWidth = _props.imgWidth;
-			var width = _props.width;
-
-			// calculate scale based on current 'width' and the original 'imgWidth'
-			var scale = width && imgWidth && imgWidth > 0 ? width / imgWidth : 1;
-			// method that is used to scale each area coordinates
-			var scaleCoords = function scaleCoords(coords) {
-				return coords.map(function (coord) {
-					return coord * scale;
-				});
-			};
-
-			return this.props.map.areas.map(function (area, index) {
-				return _react2['default'].createElement('area', { key: area._id || index, shape: area.shape, coords: scaleCoords(area.coords).join(','),
-					onMouseEnter: _this3.hoverOn.bind(_this3, area, index),
-					onMouseLeave: _this3.hoverOff.bind(_this3, area, index),
-					onClick: _this3.click.bind(_this3, area, index), href: area.href });
-			});
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this4 = this;
-
-			return _react2['default'].createElement('div', { style: this.styles.container, ref: function ref(node) {
-					return _this4.container = node;
-				} }, _react2['default'].createElement('img', { style: this.styles.img, src: this.props.src, useMap: '#' + this.props.map.name, alt: '',
-				ref: function ref(node) {
-					return _this4.img = node;
-				}, onLoad: this.initCanvas,
-				onClick: this.props.onImageClick }), _react2['default'].createElement('canvas', { ref: function ref(node) {
-					return _this4.canvas = node;
-				}, style: this.styles.canvas }), _react2['default'].createElement('map', { name: this.props.map.name, style: this.styles.map }, this.renderAreas()));
-		}
-	}]);
-
-	return ImageMapper;
-}(_react.Component);
-
-exports['default'] = ImageMapper;
-
-ImageMapper.defaultProps = {
-	active: true,
-	fillColor: 'rgba(255, 255, 255, 0.5)',
-	lineWidth: 1,
-	map: {
-		areas: [],
-		name: 'image-map-' + Math.random()
-	},
-	strokeColor: 'rgba(0, 0, 0, 0.5)'
-};
-
-ImageMapper.propTypes = {
-	active: _propTypes2['default'].bool,
-	fillColor: _propTypes2['default'].string,
-	height: _propTypes2['default'].number,
-	lineWidth: _propTypes2['default'].number,
-	map: _propTypes2['default'].shape({
-		areas: _propTypes2['default'].arrayOf(_propTypes2['default'].shape({
-			area: _propTypes2['default'].shape({
-				coords: _propTypes2['default'].arrayOf(_propTypes2['default'].number),
-				href: _propTypes2['default'].string,
-				shape: _propTypes2['default'].string
-			})
-		})),
-		name: _propTypes2['default'].string
-	}),
-	onClick: _propTypes2['default'].func,
-	onImageClick: _propTypes2['default'].func,
-	onLoad: _propTypes2['default'].func,
-	onMouseEnter: _propTypes2['default'].func,
-	onMouseLeave: _propTypes2['default'].func,
-	src: _propTypes2['default'].string.isRequired,
-	strokeColor: _propTypes2['default'].string,
-	width: _propTypes2['default'].number,
-	imgWidth: _propTypes2['default'].number
-};
-module.exports = exports['default'];
 
 /***/ }),
 
@@ -482,7 +191,7 @@ module.exports = exports['default'];
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"location--type-firstLocation":"location--type-firstLocation__3l4S8","Vasia":"Vasia__3aWyP","location--type-secondLocation":"location--type-secondLocation__sxnew","Sokol":"Sokol__16riw","location":"location__3MKUz","location--mask":"location--mask__fUvjT"};
+module.exports = {"location--type-firstLocation":"location--type-firstLocation__3l4S8","Vasia":"Vasia__3aWyP","secondLocation":"secondLocation__2AT-1","location--type-secondLocation":"location--type-secondLocation__sxnew","Sokol":"Sokol__16riw","location":"location__3MKUz","location--mask":"location--mask__fUvjT"};
 
 /***/ }),
 
@@ -494,30 +203,11 @@ module.exports = {"conversation":"conversation__3mSUd","conversation--bg":"conve
 
 /***/ }),
 
-/***/ "Asjh":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-/***/ }),
-
-/***/ "CqF9":
+/***/ "DWKC":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"next-location":"next-location__DZC1w","flicker":"flicker__3GgUv"};
+module.exports = {"arrow":"arrow__2_DE2"};
 
 /***/ }),
 
@@ -5149,7 +4839,7 @@ function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
 
 function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
   return mapDispatchToProps && (typeof mapDispatchToProps === 'undefined' ? 'undefined' : _typeof(mapDispatchToProps)) === 'object' ? wrapMapToPropsConstant(function (dispatch) {
-    return Object(redux["bindActionCreators"])(mapDispatchToProps, dispatch);
+    return Object(redux["b" /* bindActionCreators */])(mapDispatchToProps, dispatch);
   }) : undefined;
 }
 
@@ -5422,1081 +5112,19 @@ var preact_redux_esm_index = { Provider: preact_redux_esm_Provider, connect: con
 
 /* harmony default export */ var preact_redux_esm = (preact_redux_esm_index);
 //# sourceMappingURL=preact-redux.esm.js.map
-// EXTERNAL MODULE: ../node_modules/redux-devtools-extension/index.js
-var redux_devtools_extension = __webpack_require__("yP4S");
-var redux_devtools_extension_default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension);
-
-// EXTERNAL MODULE: ../node_modules/redux-immutable/dist/index.js
-var dist = __webpack_require__("IU3z");
-var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
-
-// EXTERNAL MODULE: ../node_modules/immutable/dist/immutable.es.js
-var immutable_es = __webpack_require__("vqB5");
-
-// EXTERNAL MODULE: ../node_modules/invariant/invariant.js
-var invariant_invariant = __webpack_require__("UyDz");
-var invariant_default = /*#__PURE__*/__webpack_require__.n(invariant_invariant);
-
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isFunction.js
-/* harmony default export */ var isFunction = (function (value) {
-  return typeof value === 'function';
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isSymbol.js
-/* harmony default export */ var isSymbol = (function (value) {
-  return typeof value === 'symbol' || typeof value === 'object' && Object.prototype.toString.call(value) === '[object Symbol]';
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isEmpty.js
-/* harmony default export */ var isEmpty = (function (value) {
-  return value.length === 0;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/toString.js
-/* harmony default export */ var utils_toString = (function (value) {
-  return value.toString();
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isString.js
-/* harmony default export */ var isString = (function (value) {
-  return typeof value === 'string';
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/constants.js
-var DEFAULT_NAMESPACE = '/';
-var ACTION_TYPE_DELIMITER = '||';
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/combineActions.js
-
-
-
-
-
-
-
-
-function isValidActionType(type) {
-  return isString(type) || isFunction(type) || isSymbol(type);
-}
-
-function isValidActionTypes(types) {
-  if (isEmpty(types)) {
-    return false;
-  }
-
-  return types.every(isValidActionType);
-}
-
-function combineActions() {
-  for (var _len = arguments.length, actionsTypes = new Array(_len), _key = 0; _key < _len; _key++) {
-    actionsTypes[_key] = arguments[_key];
-  }
-
-  invariant_default()(isValidActionTypes(actionsTypes), 'Expected action types to be strings, symbols, or action creators');
-  var combinedActionType = actionsTypes.map(utils_toString).join(ACTION_TYPE_DELIMITER);
-  return {
-    toString: function toString() {
-      return combinedActionType;
-    }
-  };
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/identity.js
-/* harmony default export */ var identity = (function (value) {
-  return value;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isNull.js
-/* harmony default export */ var isNull = (function (value) {
-  return value === null;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/createAction.js
-
-
-
-
-function createAction(type, payloadCreator, metaCreator) {
-  if (payloadCreator === void 0) {
-    payloadCreator = identity;
-  }
-
-  invariant_default()(isFunction(payloadCreator) || isNull(payloadCreator), 'Expected payloadCreator to be a function, undefined or null');
-  var finalPayloadCreator = isNull(payloadCreator) || payloadCreator === identity ? identity : function (head) {
-    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    return head instanceof Error ? head : payloadCreator.apply(void 0, [head].concat(args));
-  };
-  var hasMeta = isFunction(metaCreator);
-  var typeString = type.toString();
-
-  var actionCreator = function actionCreator() {
-    var payload = finalPayloadCreator.apply(void 0, arguments);
-    var action = {
-      type: type
-    };
-
-    if (payload instanceof Error) {
-      action.error = true;
-    }
-
-    if (payload !== undefined) {
-      action.payload = payload;
-    }
-
-    if (hasMeta) {
-      action.meta = metaCreator.apply(void 0, arguments);
-    }
-
-    return action;
-  };
-
-  actionCreator.toString = function () {
-    return typeString;
-  };
-
-  return actionCreator;
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isPlainObject.js
-/* harmony default export */ var utils_isPlainObject = (function (value) {
-  if (typeof value !== 'object' || value === null) return false;
-  var proto = value;
-
-  while (Object.getPrototypeOf(proto) !== null) {
-    proto = Object.getPrototypeOf(proto);
-  }
-
-  return Object.getPrototypeOf(value) === proto;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isArray.js
-/* harmony default export */ var isArray = (function (value) {
-  return Array.isArray(value);
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isNil.js
-/* harmony default export */ var isNil = (function (value) {
-  return value === null || value === undefined;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/getLastElement.js
-/* harmony default export */ var getLastElement = (function (array) {
-  return array[array.length - 1];
-});
-// EXTERNAL MODULE: ../node_modules/to-camel-case/index.js
-var to_camel_case = __webpack_require__("eHdh");
-var to_camel_case_default = /*#__PURE__*/__webpack_require__.n(to_camel_case);
-
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/camelCase.js
-
-var namespacer = '/';
-/* harmony default export */ var camelCase = (function (type) {
-  return type.includes(namespacer) ? type.split(namespacer).map(to_camel_case_default.a).join(namespacer) : to_camel_case_default()(type);
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/arrayToObject.js
-/* harmony default export */ var arrayToObject = (function (array, callback) {
-  return array.reduce(function (partialObject, element) {
-    return callback(partialObject, element);
-  }, {});
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isMap.js
-/* harmony default export */ var isMap = (function (value) {
-  return typeof Map !== 'undefined' && value instanceof Map;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/ownKeys.js
-
-function ownKeys(object) {
-  if (isMap(object)) {
-    // We are using loose transforms in babel. Here we are trying to convert an
-    // interable to an array. Loose mode expects everything to already be an
-    // array. The problem is that our eslint rules encourage us to prefer
-    // spread over Array.from.
-    //
-    // Instead of disabling loose mode we simply disable the warning.
-    // eslint-disable-next-line unicorn/prefer-spread
-    return Array.from(object.keys());
-  }
-
-  if (typeof Reflect !== 'undefined' && typeof Reflect.ownKeys === 'function') {
-    return Reflect.ownKeys(object);
-  }
-
-  var keys = Object.getOwnPropertyNames(object);
-
-  if (typeof Object.getOwnPropertySymbols === 'function') {
-    keys = keys.concat(Object.getOwnPropertySymbols(object));
-  }
-
-  return keys;
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/get.js
-
-function get(key, x) {
-  return isMap(x) ? x.get(key) : x[key];
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenWhenNode.js
-
-
-
-/* harmony default export */ var flattenWhenNode = (function (predicate) {
-  return function flatten(map, _temp, partialFlatMap, partialFlatActionType) {
-    var _ref = _temp === void 0 ? {} : _temp,
-        _ref$namespace = _ref.namespace,
-        namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace,
-        prefix = _ref.prefix;
-
-    if (partialFlatMap === void 0) {
-      partialFlatMap = {};
-    }
-
-    if (partialFlatActionType === void 0) {
-      partialFlatActionType = '';
-    }
-
-    function connectNamespace(type) {
-      var _ref2;
-
-      if (!partialFlatActionType) return type;
-      var types = type.toString().split(ACTION_TYPE_DELIMITER);
-      var partials = partialFlatActionType.split(ACTION_TYPE_DELIMITER);
-      return (_ref2 = []).concat.apply(_ref2, partials.map(function (p) {
-        return types.map(function (t) {
-          return "" + p + namespace + t;
-        });
-      })).join(ACTION_TYPE_DELIMITER);
-    }
-
-    function connectPrefix(type) {
-      if (partialFlatActionType || !prefix) {
-        return type;
-      }
-
-      return "" + prefix + namespace + type;
-    }
-
-    ownKeys(map).forEach(function (type) {
-      var nextNamespace = connectPrefix(connectNamespace(type));
-      var mapValue = get(type, map);
-
-      if (predicate(mapValue)) {
-        flatten(mapValue, {
-          namespace: namespace,
-          prefix: prefix
-        }, partialFlatMap, nextNamespace);
-      } else {
-        partialFlatMap[nextNamespace] = mapValue;
-      }
-    });
-    return partialFlatMap;
-  };
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenActionMap.js
-
-
-/* harmony default export */ var flattenActionMap = (flattenWhenNode(utils_isPlainObject));
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/unflattenActionCreators.js
-
-
-
-function unflattenActionCreators(flatActionCreators, _temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-      _ref$namespace = _ref.namespace,
-      namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace,
-      prefix = _ref.prefix;
-
-  function unflatten(flatActionType, partialNestedActionCreators, partialFlatActionTypePath) {
-    var nextNamespace = camelCase(partialFlatActionTypePath.shift());
-
-    if (isEmpty(partialFlatActionTypePath)) {
-      partialNestedActionCreators[nextNamespace] = flatActionCreators[flatActionType];
-    } else {
-      if (!partialNestedActionCreators[nextNamespace]) {
-        partialNestedActionCreators[nextNamespace] = {};
-      }
-
-      unflatten(flatActionType, partialNestedActionCreators[nextNamespace], partialFlatActionTypePath);
-    }
-  }
-
-  var nestedActionCreators = {};
-  Object.getOwnPropertyNames(flatActionCreators).forEach(function (type) {
-    var unprefixedType = prefix ? type.replace("" + prefix + namespace, '') : type;
-    return unflatten(type, nestedActionCreators, unprefixedType.split(namespace));
-  });
-  return nestedActionCreators;
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/createActions.js
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
-  }return target;
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
-  } else {
-    obj[key] = value;
-  }return obj;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function createActions(actionMap) {
-  for (var _len = arguments.length, identityActions = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    identityActions[_key - 1] = arguments[_key];
-  }
-
-  var options = utils_isPlainObject(getLastElement(identityActions)) ? identityActions.pop() : {};
-  invariant_default()(identityActions.every(isString) && (isString(actionMap) || utils_isPlainObject(actionMap)), 'Expected optional object followed by string action types');
-
-  if (isString(actionMap)) {
-    return actionCreatorsFromIdentityActions([actionMap].concat(identityActions), options);
-  }
-
-  return _objectSpread({}, actionCreatorsFromActionMap(actionMap, options), actionCreatorsFromIdentityActions(identityActions, options));
-}
-
-function actionCreatorsFromActionMap(actionMap, options) {
-  var flatActionMap = flattenActionMap(actionMap, options);
-  var flatActionCreators = actionMapToActionCreators(flatActionMap);
-  return unflattenActionCreators(flatActionCreators, options);
-}
-
-function actionMapToActionCreators(actionMap, _temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-      prefix = _ref.prefix,
-      _ref$namespace = _ref.namespace,
-      namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace;
-
-  function isValidActionMapValue(actionMapValue) {
-    if (isFunction(actionMapValue) || isNil(actionMapValue)) {
-      return true;
-    }
-
-    if (isArray(actionMapValue)) {
-      var _actionMapValue$ = actionMapValue[0],
-          payload = _actionMapValue$ === void 0 ? identity : _actionMapValue$,
-          meta = actionMapValue[1];
-      return isFunction(payload) && isFunction(meta);
-    }
-
-    return false;
-  }
-
-  return arrayToObject(Object.keys(actionMap), function (partialActionCreators, type) {
-    var _objectSpread2;
-
-    var actionMapValue = actionMap[type];
-    invariant_default()(isValidActionMapValue(actionMapValue), 'Expected function, undefined, null, or array with payload and meta ' + ("functions for " + type));
-    var prefixedType = prefix ? "" + prefix + namespace + type : type;
-    var actionCreator = isArray(actionMapValue) ? createAction.apply(void 0, [prefixedType].concat(actionMapValue)) : createAction(prefixedType, actionMapValue);
-    return _objectSpread({}, partialActionCreators, (_objectSpread2 = {}, _objectSpread2[type] = actionCreator, _objectSpread2));
-  });
-}
-
-function actionCreatorsFromIdentityActions(identityActions, options) {
-  var actionMap = arrayToObject(identityActions, function (partialActionMap, type) {
-    var _objectSpread3;
-
-    return _objectSpread({}, partialActionMap, (_objectSpread3 = {}, _objectSpread3[type] = identity, _objectSpread3));
-  });
-  var actionCreators = actionMapToActionCreators(actionMap, options);
-  return arrayToObject(Object.keys(actionCreators), function (partialActionCreators, type) {
-    var _objectSpread4;
-
-    return _objectSpread({}, partialActionCreators, (_objectSpread4 = {}, _objectSpread4[camelCase(type)] = actionCreators[type], _objectSpread4));
-  });
-}
-// EXTERNAL MODULE: ../node_modules/just-curry-it/index.js
-var just_curry_it = __webpack_require__("LbRA");
-var just_curry_it_default = /*#__PURE__*/__webpack_require__.n(just_curry_it);
-
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/createCurriedAction.js
-
-
-/* harmony default export */ var createCurriedAction = (function (type, payloadCreator) {
-  return just_curry_it_default()(createAction(type, payloadCreator), payloadCreator.length);
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isUndefined.js
-/* harmony default export */ var isUndefined = (function (value) {
-  return value === undefined;
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/handleAction.js
-
-
-
-
-
-
-
-
-function handleAction(type, reducer, defaultState) {
-  if (reducer === void 0) {
-    reducer = identity;
-  }
-
-  var types = utils_toString(type).split(ACTION_TYPE_DELIMITER);
-  invariant_default()(!isUndefined(defaultState), "defaultState for reducer handling " + types.join(', ') + " should be defined");
-  invariant_default()(isFunction(reducer) || utils_isPlainObject(reducer), 'Expected reducer to be a function or object with next and throw reducers');
-
-  var _ref = isFunction(reducer) ? [reducer, reducer] : [reducer.next, reducer.throw].map(function (aReducer) {
-    return isNil(aReducer) ? identity : aReducer;
-  }),
-      nextReducer = _ref[0],
-      throwReducer = _ref[1];
-
-  return function (state, action) {
-    if (state === void 0) {
-      state = defaultState;
-    }
-
-    var actionType = action.type;
-
-    if (!actionType || types.indexOf(utils_toString(actionType)) === -1) {
-      return state;
-    }
-
-    return (action.error === true ? throwReducer : nextReducer)(state, action);
-  };
-}
-// CONCATENATED MODULE: ../node_modules/reduce-reducers/es/index.js
-/* harmony default export */ var es = (function () {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  var initialState = typeof args[args.length - 1] !== 'function' && args.pop();
-  var reducers = args;
-
-  if (typeof initialState === 'undefined') {
-    throw new TypeError('The initial state may not be undefined. If you do not want to set a value for this reducer, you can use null instead of undefined.');
-  }
-
-  return function (prevState, value) {
-    for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-      args[_key2 - 2] = arguments[_key2];
-    }
-
-    var prevStateIsUndefined = typeof prevState === 'undefined';
-    var valueIsUndefined = typeof value === 'undefined';
-
-    if (prevStateIsUndefined && valueIsUndefined && initialState) {
-      return initialState;
-    }
-
-    return reducers.reduce(function (newState, reducer) {
-      return reducer.apply(undefined, [newState, value].concat(args));
-    }, prevStateIsUndefined && !valueIsUndefined && initialState ? initialState : prevState);
-  };
-});
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/hasGeneratorInterface.js
-
-function hasGeneratorInterface(handler) {
-  var keys = ownKeys(handler);
-  var hasOnlyInterfaceNames = keys.every(function (ownKey) {
-    return ownKey === 'next' || ownKey === 'throw';
-  });
-  return keys.length && keys.length <= 2 && hasOnlyInterfaceNames;
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenReducerMap.js
-
-
-
-
-/* harmony default export */ var flattenReducerMap = (flattenWhenNode(function (node) {
-  return (utils_isPlainObject(node) || isMap(node)) && !hasGeneratorInterface(node);
-}));
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/handleActions.js
-
-
-
-
-
-
-
-
-function handleActions(handlers, defaultState, options) {
-  if (options === void 0) {
-    options = {};
-  }
-
-  invariant_default()(utils_isPlainObject(handlers) || isMap(handlers), 'Expected handlers to be a plain object.');
-  var flattenedReducerMap = flattenReducerMap(handlers, options);
-  var reducers = ownKeys(flattenedReducerMap).map(function (type) {
-    return handleAction(type, get(type, flattenedReducerMap), defaultState);
-  });
-  var reducer = es.apply(void 0, reducers.concat([defaultState]));
-  return function (state, action) {
-    if (state === void 0) {
-      state = defaultState;
-    }
-
-    return reducer(state, action);
-  };
-}
-// CONCATENATED MODULE: ../node_modules/redux-actions/es/index.js
-
-
-
-
-
-
-
-// CONCATENATED MODULE: ./data/locations/firstLocation.js
-/* harmony default export */ var firstLocation = ({
-	name: 'firstLocation',
-	characters: [{
-		name: 'Vasia',
-		available: true
-	}],
-	nextLocations: [{
-		name: 'secondLocation',
-		coords: {
-			desktop: "267,529 302,481 317,433 328,443 353,448 365,493 381,504 446,616 497,597 443,495 450,457 452,430 484,408 526,393 533,267 544,222 532,217 514,217 514,226 502,230 499,217 476,215 476,224 469,223 465,214 444,222 444,230 436,230 435,223 422,225 409,231 409,258 420,269 421,284 407,283 395,282 382,284 377,309 382,330 371,336 367,320 354,310 339,301 327,299 324,252 333,235 341,230 342,195 332,183 319,167 311,168 304,158 286,150 284,158 273,155 272,144 250,143 251,152 237,154 232,144 202,146 204,152 197,156 194,151 163,154 143,165 140,185 147,239 121,235 100,242 94,252 94,271 94,350 95,425 139,443 174,417 184,433 184,500"
-		},
-		available: true
-	}],
-	backLocation: null
-});
-// CONCATENATED MODULE: ./data/locations/secondLocation.js
-/* harmony default export */ var secondLocation = ({
-	name: 'secondLocation',
-	characters: [{
-		name: 'Sokol',
-		available: true
-	}],
-	nextLocations: null,
-	backLocation: {
-		name: 'firstLocation',
-		available: true,
-		type: 'bottom'
-	}
-});
-// CONCATENATED MODULE: ./data/locations/index.js
-
-
-
-/* harmony default export */ var locations = ({
-	firstLocation: firstLocation,
-	secondLocation: secondLocation
-});
-// CONCATENATED MODULE: ./constants/actions.js
-var CHANGE_LOCATION = 'CHANGE_LOCATION';
-var START_DIALOG = 'START_DIALOG';
-var NEXT_DIALOG = 'NEXT_DIALOG';
-var CLOSE_DIALOG = 'CLOSE_DIALOG';
-var ADD_TASK = 'ADD_TASK';
-var CHANGE_STATUS_TASK = 'CHANGE_STATUS_TASK';
-var ADD_TIP_TO_TASK = 'ADD_TIP_TO_TASK';
-var SAVE_CHARACTER_TO_HISTORY = 'SAVE_CHARACTER_TO_HISTORY';
-var ADD_OBJECT_TO_INVENTORY = 'ADD_OBJECT_TO_INVENTORY';
-var REMOVE_OBJECT_TO_INVENTORY = 'REMOVE_OBJECT_TO_INVENTORY';
-var OPEN_CHEST = 'OPEN_CHEST';
-var CLOSE_CHEST = 'CLOSE_CHEST';
-var DISPLAY_TASK = 'DISPLAY_TASK';
-var SET_MESSAGE = 'SET_MESSAGE';
-// CONCATENATED MODULE: ./reducers/general.js
-var _handleActions;
-
-
-
-
-
-
-var general_initialState = Object(immutable_es["fromJS"])({
-	locations: locations,
-	locationActive: locations.firstLocation,
-	inventory: Object(immutable_es["List"])(),
-	actions: Object(immutable_es["List"])(),
-	isOpenChest: false,
-	displayTask: null,
-	message: ''
-});
-
-var general = handleActions((_handleActions = {}, _handleActions[CHANGE_LOCATION] = function (state, _ref) {
-	var locationName = _ref.payload;
-
-	var locations = state.get('locations');
-	if (!locations.has(locationName)) throw new Error('Location not found!');
-	return state.merge({
-		locationActive: locations.get(locationName)
-	});
-}, _handleActions[ADD_OBJECT_TO_INVENTORY] = function (state, _ref2) {
-	var object = _ref2.payload;
-	return state.merge({
-		inventory: state.get('inventory').push(object)
-	});
-}, _handleActions[REMOVE_OBJECT_TO_INVENTORY] = function (state, _ref3) {
-	var object = _ref3.payload;
-	return state.merge({
-		inventory: state.get('inventory').filter(function (_object) {
-			return _object.name !== object.name;
-		})
-	});
-}, _handleActions[OPEN_CHEST] = function (state) {
-	return state.merge({
-		isOpenChest: true
-	});
-}, _handleActions[CLOSE_CHEST] = function (state) {
-	return state.merge({
-		isOpenChest: false
-	});
-}, _handleActions[SET_MESSAGE] = function (state, _ref4) {
-	var message = _ref4.payload;
-	return state.merge({
-		message: message
-	});
-}, _handleActions), general_initialState);
-
-/* harmony default export */ var reducers_general = (general);
-// CONCATENATED MODULE: ./constants/status-task.js
-var NEW = 'Новое';
-var DONE = 'Выполненное';
-var FAILED = 'Проваленое';
-// CONCATENATED MODULE: ./data/characters/vasia.js
-
-
-/* harmony default export */ var vasia = ({
-	name: 'Vasia',
-	startDialog: 'offerTask',
-	dialogs: {
-		offerTask: {
-			text: 'Привет, не хочешь выручить земляка?',
-			context: 'с надеждой',
-			close: true,
-			answers: [{
-				text: 'Ближе к делу',
-				character: {
-					text: 'Есть стражник в городе, его зовут Сокол. Он должен мне кое что передать. Поговори с ним, скажи что от Васи. Потом сразу сюда, я тебя буду ждать сдесь. Даже не вздумай убежать с моей поссылкой. Если всё пройдет гладко за мной не заржавеет',
-					context: 'радосно',
-					answers: [{
-						text: 'Договорились, скоро буду',
-						close: true,
-						task: {
-							name: 'parcel',
-							action: 'add'
-						},
-						history: {
-							characters: [{
-								name: 'Vasia',
-								startDialog: 'default'
-							}]
-						}
-					}]
-				}
-			}, {
-				text: 'Ух ты, этот комок шерсти может еще разговаривать. Не хочешь меня выручить, есть пару золотых для будущего друга?',
-				character: {
-					text: 'Есть, подойди поближе',
-					context: 'со злостью',
-					close: true,
-					message: 'Вы были убиты и изнасилованы!'
-				}
-			}]
-		},
-		default: {
-			text: 'Есть новости для меня?',
-			context: 'с надеждой',
-			close: true,
-			answers: [{
-				conditions: {
-					actions: [],
-					inventory: ['parcel']
-				},
-				text: 'Вот твоя поссылка',
-				task: {
-					params: {
-						name: 'parcel',
-						status: DONE
-					},
-					action: 'change_status'
-				},
-				inventory: {
-					object: {
-						name: 'parcel'
-					},
-					action: 'remove'
-				},
-				character: {
-					text: 'Спасибо земляк, вот тебе 10 золотых',
-					close: true,
-					message: 'Вы прошли игру поздравляю!'
-				}
-			}]
-		}
-	}
-});
-// CONCATENATED MODULE: ./data/characters/sokol.js
-
-
-var answerParcel = {
-	conditions: {
-		tasks: [{
-			name: 'parcel',
-			status: NEW
-		}]
-	},
-	forceDisplay: true,
-	forceDisplayMessage: 'Нужно имееть задание от Васи!',
-	text: 'Я от Васи за поссылкой',
-	inventory: {
-		object: {
-			name: 'parcel',
-			description: 'Поссылка для Васи'
-		},
-		action: 'add'
-	},
-	task: {
-		params: {
-			name: 'parcel',
-			tip: 'Вы получили поссылку, осталось её вернуть Васе'
-		},
-		action: 'tip'
-	},
-	character: {
-		text: 'Ааа че ты сразу не сказал? Вот бери...',
-		close: true
-	}
-};
-
-/* harmony default export */ var sokol = ({
-	name: 'Sokol',
-	startDialog: 'default',
-	dialogs: {
-		getOut: {
-			text: 'Я не ясно выразился, проваливай!',
-			close: true,
-			isTarget: true,
-			answers: [answerParcel]
-		},
-		default: {
-			text: 'Ты кто такой? Я тебя раньше не видел.',
-			close: true,
-			isTarget: true,
-			answers: [answerParcel, {
-				text: 'Я фермер из Стрижовки',
-				history: {
-					characters: [{
-						name: 'Sokol',
-						startDialog: 'getOut'
-					}]
-				},
-				character: {
-					text: 'Тебя еще сдесь не хватало, проваливай олух!',
-					close: true,
-					answers: [{
-						text: 'Я тебе сейчас покажу кто олух!',
-						character: {
-							text: '...',
-							close: true,
-							message: 'Вы не сумели показать, кто олух и были убиты!'
-						}
-					}]
-				}
-			}]
-		}
-	}
-});
-// CONCATENATED MODULE: ./data/characters/index.js
-
-
-
-/* harmony default export */ var data_characters = ({
-	Vasia: vasia,
-	Sokol: sokol
-});
-// CONCATENATED MODULE: ./reducers/conversation.js
-var conversation__handleActions;
-
-var conversation__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-
-
-
-
-
-var conversation_initialState = Object(immutable_es["fromJS"])({
-	dialog: null,
-	character: null,
-	history: Object(immutable_es["List"])()
-});
-
-var conversation_conversation = handleActions((conversation__handleActions = {}, conversation__handleActions[START_DIALOG] = function (state, _ref) {
-	var characterName = _ref.payload;
-
-	var dialog = void 0;
-	var character = data_characters[characterName];
-	var characterFromHistory = state.get('history').find(function (character) {
-		return character.name === characterName;
-	});
-	if (!character) throw new Error('Character not found!');
-
-	if (characterFromHistory) {
-		dialog = character.dialogs[characterFromHistory.startDialog];
-	} else {
-		dialog = character.dialogs[character.startDialog];
-	}
-
-	return state.merge({
-		character: character,
-		dialog: dialog
-	});
-}, conversation__handleActions[NEXT_DIALOG] = function (state, _ref2) {
-	var conversation = _ref2.payload;
-	return state.merge({
-		dialog: conversation
-	});
-}, conversation__handleActions[CLOSE_DIALOG] = function (state) {
-	return state.merge({
-		dialog: null,
-		character: null
-	});
-}, conversation__handleActions[SAVE_CHARACTER_TO_HISTORY] = function (state, _ref3) {
-	var character = _ref3.payload;
-
-	var history = state.get('history');
-	if (history.find(function (_character) {
-		return _character.name === character.name;
-	})) {
-		history = history.map(function (_character) {
-			if (_character.name === character.name) {
-				return character;
-			}
-			return conversation__extends({}, _character, character);
-		});
-	} else {
-		history = history.push(character);
-	}
-	return state.merge({
-		history: history
-	});
-}, conversation__handleActions), conversation_initialState);
-
-/* harmony default export */ var reducers_conversation = (conversation_conversation);
-// CONCATENATED MODULE: ./data/tasks/index.js
-
-
-/* harmony default export */ var data_tasks = ({
-	parcel: {
-		name: 'parcel',
-		title: 'Поссылка от Сокола',
-		description: 'Нужно поговорить с городским стражником Соколом, он должен передать поссылку Васе',
-		tips: [],
-		status: NEW
-	}
-});
-// CONCATENATED MODULE: ./reducers/book.js
-var book__handleActions;
-
-var book__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-
-
-
-
-
-var book_initialState = Object(immutable_es["fromJS"])({
-  tasks: Object(immutable_es["List"])(),
-  displayTask: null
-});
-
-var book = handleActions((book__handleActions = {}, book__handleActions[ADD_TASK] = function (state, _ref) {
-  var taskName = _ref.payload;
-
-  var task = data_tasks[taskName];
-  if (!task) throw new Error('Task not found!');
-  return state.merge({
-    tasks: state.get('tasks').push(task)
-  });
-}, book__handleActions[ADD_TIP_TO_TASK] = function (state, _ref2) {
-  var task = _ref2.payload;
-
-  var displayTask = state.get('displayTask');
-  return state.merge({
-    tasks: state.get('tasks').map(function (_task) {
-      if (_task.name === task.name) {
-        var nextTask = book__extends({}, _task, {
-          tips: [].concat(_task.tips, [task.tip])
-        });
-        if (displayTask && displayTask.name === nextTask.name) {
-          displayTask = nextTask;
-        }
-        return nextTask;
-      }
-      return _task;
-    }),
-    displayTask: displayTask
-  });
-}, book__handleActions[CHANGE_STATUS_TASK] = function (state, _ref3) {
-  var task = _ref3.payload;
-
-  return state.merge({
-    tasks: state.get('tasks').map(function (_task) {
-      if (_task.name === task.name) {
-        return book__extends({}, _task, {
-          status: task.status
-        });
-      }
-      return _task;
-    })
-  });
-}, book__handleActions[DISPLAY_TASK] = function (state, _ref4) {
-  var task = _ref4.payload;
-  return state.merge({
-    displayTask: task
-  });
-}, book__handleActions), book_initialState);
-
-/* harmony default export */ var reducers_book = (book);
-// CONCATENATED MODULE: ./reducers/index.js
-
-
-
-
-
-var reducers_reducers = Object(dist["combineReducers"])({
-	general: reducers_general,
-	conversation: reducers_conversation,
-	book: reducers_book
-});
-
-/* harmony default export */ var reducers_0 = (reducers_reducers);
-// EXTERNAL MODULE: ../node_modules/noty/lib/noty.js
-var noty = __webpack_require__("J21r");
-var noty_default = /*#__PURE__*/__webpack_require__.n(noty);
-
-// EXTERNAL MODULE: ./middleware/style.scss
-var middleware_style = __webpack_require__("y8vE");
-var middleware_style_default = /*#__PURE__*/__webpack_require__.n(middleware_style);
-
-// CONCATENATED MODULE: ./middleware/noty.js
-
-
-
-
-
-var noty_createNoty = function createNoty(text) {
-  new noty_default.a({
-    text: text,
-    layout: 'topCenter',
-    timeout: 5000
-  }).show();
-};
-
-var noty_notyMiddleware = function notyMiddleware(store) {
-  return function (next) {
-    return function (action) {
-      var type = action.type,
-          payload = action.payload;
-
-
-      if (type === ADD_TASK) {
-        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E');
-      } else if (type === CHANGE_STATUS_TASK) {
-        if (payload.status === DONE) {
-          noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
-        }
-      } else if (type === ADD_OBJECT_TO_INVENTORY) {
-        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C');
-      } else if (type === REMOVE_OBJECT_TO_INVENTORY) {
-        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0443\u0431\u0440\u0430\u043D \u0438\u0437 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F');
-      } else if (type === ADD_TIP_TO_TASK) {
-        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
-      }
-
-      return next(action);
-    };
-  };
-};
-
-/* harmony default export */ var middleware_noty = (noty_notyMiddleware);
-// CONCATENATED MODULE: ./actions/conversation.js
-
-
-
-var startDialog = createAction(START_DIALOG, function (characterName) {
-  return characterName;
-});
-
-var nextDialog = createAction(NEXT_DIALOG, function (conversation) {
-  return conversation;
-});
-
-var closeDialog = createAction(CLOSE_DIALOG, function (conversation) {
-  return conversation;
-});
-
-var saveCharacterToHistory = createAction(SAVE_CHARACTER_TO_HISTORY, function (character) {
-  return character;
-});
-// CONCATENATED MODULE: ./middleware/dialog.js
-
-
-
-
-var dialog_dialogMiddleware = function dialogMiddleware(store) {
-  return function (next) {
-    return function (action) {
-      var type = action.type,
-          payload = action.payload;
-
-      if (type === CHANGE_LOCATION) {
-        var state = store.getState();
-        var characters = state.get('general').get('locations').get(payload).get('characters');
-
-        if (characters.size > 0) {
-          var conversation = state.get('conversation');
-          var history = conversation.has('history') ? conversation.get('history').toArray() : null;
-          characters.toArray().forEach(function (_character) {
-            var character = _character.toObject();
-            var startDialogCharacter = void 0;
-            var characterDefault = data_characters[character.name];
-            var characterHistory = history && history.find(function (char) {
-              return char.name === character.name;
-            });
-            if (characterHistory) {
-              startDialogCharacter = characterDefault.dialogs[characterHistory.startDialog];
-            } else {
-              startDialogCharacter = characterDefault.dialogs[characterDefault.startDialog];
-            }
-            if (startDialogCharacter && startDialogCharacter.isTarget) {
-              store.dispatch(startDialog(character.name));
-            }
-          });
-        }
-      }
-      return next(action);
-    };
-  };
-};
-
-/* harmony default export */ var middleware_dialog = (dialog_dialogMiddleware);
 // CONCATENATED MODULE: ./configureStore.js
+var configStore = void 0;
 
-
-
-
-
-
-function configureStore(initialState) {
-	return Object(redux["createStore"])(reducers_0, initialState, Object(redux_devtools_extension["composeWithDevTools"])(Object(redux["applyMiddleware"])(middleware_noty, middleware_dialog)));
+if (false) {
+  configStore = require('./configureStoreDev').default;
+} else {
+  configStore = __webpack_require__("l11E").default;
 }
-// EXTERNAL MODULE: ../node_modules/reselect-immutable-helpers/dist.js
-var reselect_immutable_helpers_dist = __webpack_require__("qTRi");
-var reselect_immutable_helpers_dist_default = /*#__PURE__*/__webpack_require__.n(reselect_immutable_helpers_dist);
 
-// EXTERNAL MODULE: ../node_modules/react-image-mapper/lib/ImageMapper.js
-var ImageMapper = __webpack_require__("85nt");
-var ImageMapper_default = /*#__PURE__*/__webpack_require__.n(ImageMapper);
+/* harmony default export */ var configureStore = (configStore);
+// EXTERNAL MODULE: ../node_modules/reselect-immutable-helpers/dist.js
+var dist = __webpack_require__("qTRi");
+var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
 
 // EXTERNAL MODULE: ./components/location/style.scss
 var location_style = __webpack_require__("9UV0");
@@ -6525,36 +5153,32 @@ var character_Character = function Character(_ref) {
 };
 
 /* harmony default export */ var components_character = (character_Character);
-// EXTERNAL MODULE: ./components/next-location/style.scss
-var next_location_style = __webpack_require__("CqF9");
-var next_location_style_default = /*#__PURE__*/__webpack_require__.n(next_location_style);
+// EXTERNAL MODULE: ./components/arrow/style.scss
+var arrow_style = __webpack_require__("DWKC");
+var arrow_style_default = /*#__PURE__*/__webpack_require__.n(arrow_style);
 
-// CONCATENATED MODULE: ./components/next-location/index.js
+// CONCATENATED MODULE: ./components/arrow/index.js
 
 
 
-var next_location_NextLocation = function NextLocation(_ref) {
-	var name = _ref.name,
-	    available = _ref.available,
-	    coords = _ref.coords,
-	    handlerOnClick = _ref.handlerOnClick;
-	return Object(preact_min["h"])(
-		'polygon',
-		{ points: coords.desktop, className: next_location_style_default.a['next-location'], onClick: function onClick() {
-				return handlerOnClick(name);
-			} },
-		Object(preact_min["h"])(
-			'title',
-			null,
-			name
-		)
-	);
+var arrow_Arrow = function Arrow(_ref) {
+		var name = _ref.name,
+		    available = _ref.available,
+		    type = _ref.type,
+		    className = _ref.className,
+		    handlerOnClick = _ref.handlerOnClick;
+		return Object(preact_min["h"])(
+				"div",
+				{ className: arrow_style_default.a.arrow + " " + className },
+				Object(preact_min["h"])("img", { src: "/assets/arrows/" + type + ".svg", alt: "arrow", onClick: function onClick() {
+								return handlerOnClick(name);
+						} })
+		);
 };
 
-/* harmony default export */ var next_location = (next_location_NextLocation);
+/* harmony default export */ var arrow = (arrow_Arrow);
 // CONCATENATED MODULE: ./components/location/index.js
 var location__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 
 
 
@@ -6576,15 +5200,12 @@ var location_Location = function Location(_ref) {
 				handlerClick: handlerClickCharacter
 			}));
 		}),
-		nextLocations && Object(preact_min["h"])(
-			'svg',
-			{ className: location_style_default.a['location--mask'] },
-			nextLocations.map(function (location) {
-				return Object(preact_min["h"])(next_location, location__extends({}, location, { className: location_style_default.a[location.name],
-					handlerOnClick: handlerChangeLocation
-				}));
-			})
-		)
+		Array.isArray(nextLocations) && nextLocations.map(function (location) {
+			return Object(preact_min["h"])(arrow, location__extends({}, location, {
+				className: location_style_default.a[location.name],
+				handlerOnClick: handlerChangeLocation
+			}));
+		})
 	);
 };
 
@@ -6597,7 +5218,7 @@ var conversation_style_default = /*#__PURE__*/__webpack_require__.n(conversation
 
 
 
-var conversation__ref2 = Object(preact_min["h"])('div', null);
+var _ref2 = Object(preact_min["h"])('div', null);
 
 var conversation_Conversation = function Conversation(_ref) {
 	var character = _ref.character,
@@ -6662,7 +5283,7 @@ var conversation_Conversation = function Conversation(_ref) {
 								)
 							);
 						}
-						return conversation__ref2;
+						return _ref2;
 					}),
 					dialog.close && Object(preact_min["h"])(
 						'li',
@@ -6926,82 +5547,94 @@ var back_location_BackLocation = function BackLocation(_ref) {
 };
 
 /* harmony default export */ var back_location = (back_location_BackLocation);
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/index.js + 26 modules
+var es = __webpack_require__("bKsd");
+
+// EXTERNAL MODULE: ./constants/actions.js
+var actions = __webpack_require__("5QES");
+
 // CONCATENATED MODULE: ./actions/general.js
 
 
 
-var changeLocation = createAction(CHANGE_LOCATION, function (locationName) {
+var changeLocation = Object(es["a" /* createAction */])(actions["d" /* CHANGE_LOCATION */], function (locationName) {
   return locationName;
 });
 
-var addObjectToInventory = createAction(ADD_OBJECT_TO_INVENTORY, function (object) {
+var addObjectToInventory = Object(es["a" /* createAction */])(actions["a" /* ADD_OBJECT_TO_INVENTORY */], function (object) {
   return object;
 });
 
-var removeObjectToInventory = createAction(REMOVE_OBJECT_TO_INVENTORY, function (object) {
+var removeObjectToInventory = Object(es["a" /* createAction */])(actions["k" /* REMOVE_OBJECT_TO_INVENTORY */], function (object) {
   return object;
 });
 
-var openChest = createAction(OPEN_CHEST);
+var openChest = Object(es["a" /* createAction */])(actions["j" /* OPEN_CHEST */]);
 
-var closeChest = createAction(CLOSE_CHEST);
+var closeChest = Object(es["a" /* createAction */])(actions["f" /* CLOSE_CHEST */]);
 
-var setMessage = createAction(SET_MESSAGE, function (message) {
+var setMessage = Object(es["a" /* createAction */])(actions["m" /* SET_MESSAGE */], function (message) {
   return message;
 });
+// EXTERNAL MODULE: ./actions/conversation.js
+var actions_conversation = __webpack_require__("Vyyu");
+
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/createAction.js + 1 modules
+var createAction = __webpack_require__("OY3Y");
+
 // CONCATENATED MODULE: ./actions/book.js
 
 
 
-var addTask = createAction(ADD_TASK, function (taskName) {
+var addTask = Object(createAction["a" /* default */])(actions["b" /* ADD_TASK */], function (taskName) {
   return taskName;
 });
 
-var changeStatusTask = createAction(CHANGE_STATUS_TASK, function (task) {
+var changeStatusTask = Object(createAction["a" /* default */])(actions["e" /* CHANGE_STATUS_TASK */], function (task) {
   return task;
 });
 
-var addTipToTask = createAction(ADD_TIP_TO_TASK, function (task) {
+var addTipToTask = Object(createAction["a" /* default */])(actions["c" /* ADD_TIP_TO_TASK */], function (task) {
   return task;
 });
 
-var displayTaskAction = createAction(DISPLAY_TASK, function (task) {
+var displayTaskAction = Object(createAction["a" /* default */])(actions["h" /* DISPLAY_TASK */], function (task) {
   return task;
 });
 // CONCATENATED MODULE: ./selectors/general.js
 
 
-var getGeneral = Object(reselect_immutable_helpers_dist["createGetSelector"])(function (state) {
+var getGeneral = Object(dist["createGetSelector"])(function (state) {
   return state;
 }, 'general');
 
-var getLocationActive = Object(reselect_immutable_helpers_dist["createGetSelector"])(getGeneral, 'locationActive');
+var getLocationActive = Object(dist["createGetSelector"])(getGeneral, 'locationActive');
 
-var getInventory = Object(reselect_immutable_helpers_dist["createGetSelector"])(getGeneral, 'inventory');
+var getInventory = Object(dist["createGetSelector"])(getGeneral, 'inventory');
 
-var isOpenChestSelector = Object(reselect_immutable_helpers_dist["createGetSelector"])(getGeneral, 'isOpenChest');
+var isOpenChestSelector = Object(dist["createGetSelector"])(getGeneral, 'isOpenChest');
 
-var getMessageSelector = Object(reselect_immutable_helpers_dist["createGetSelector"])(getGeneral, 'message');
+var getMessageSelector = Object(dist["createGetSelector"])(getGeneral, 'message');
 // CONCATENATED MODULE: ./selectors/conversation.js
 
 
-var getConversation = Object(reselect_immutable_helpers_dist["createGetSelector"])(function (state) {
+var getConversation = Object(dist["createGetSelector"])(function (state) {
   return state;
 }, 'conversation');
 
-var getDialog = Object(reselect_immutable_helpers_dist["createGetSelector"])(getConversation, 'dialog');
+var getDialog = Object(dist["createGetSelector"])(getConversation, 'dialog');
 
-var getCharacter = Object(reselect_immutable_helpers_dist["createGetSelector"])(getConversation, 'character');
+var getCharacter = Object(dist["createGetSelector"])(getConversation, 'character');
 // CONCATENATED MODULE: ./selectors/book.js
 
 
-var getBook = Object(reselect_immutable_helpers_dist["createGetSelector"])(function (state) {
+var getBook = Object(dist["createGetSelector"])(function (state) {
   return state;
 }, 'book');
 
-var getTasks = Object(reselect_immutable_helpers_dist["createGetSelector"])(getBook, 'tasks');
+var getTasks = Object(dist["createGetSelector"])(getBook, 'tasks');
 
-var displayTaskSelect = Object(reselect_immutable_helpers_dist["createGetSelector"])(getBook, 'displayTask');
+var displayTaskSelect = Object(dist["createGetSelector"])(getBook, 'displayTask');
 // EXTERNAL MODULE: ./routes/game/style.scss
 var game_style = __webpack_require__("vJ5B");
 var game_style_default = /*#__PURE__*/__webpack_require__.n(game_style);
@@ -7182,7 +5815,7 @@ var game_Game = function (_Component) {
   return Game;
 }(preact_min["Component"]);
 
-var mapStateToProps = Object(reselect_immutable_helpers_dist["createPropsSelector"])({
+var mapStateToProps = Object(dist["createPropsSelector"])({
   locationActive: getLocationActive,
   dialog: getDialog,
   character: getCharacter,
@@ -7199,19 +5832,19 @@ var game_mapDispatchToProps = function mapDispatchToProps(dispatch) {
       dispatch(changeLocation(locationName));
     },
     handlerStartDialog: function handlerStartDialog(characterName) {
-      dispatch(startDialog(characterName));
+      dispatch(Object(actions_conversation["d" /* startDialog */])(characterName));
     },
     handlerNextDialog: function handlerNextDialog(conversation) {
-      dispatch(nextDialog(conversation));
+      dispatch(Object(actions_conversation["b" /* nextDialog */])(conversation));
     },
     handlerCloseDialog: function handlerCloseDialog() {
-      dispatch(closeDialog());
+      dispatch(Object(actions_conversation["a" /* closeDialog */])());
     },
     handlerAddTask: function handlerAddTask(taskName) {
       dispatch(addTask(taskName));
     },
     handlerSaveCharacterToHistory: function handlerSaveCharacterToHistory(character) {
-      dispatch(saveCharacterToHistory(character));
+      dispatch(Object(actions_conversation["c" /* saveCharacterToHistory */])(character));
     },
     handlerAddInventory: function handlerAddInventory(object) {
       dispatch(addObjectToInventory(object));
@@ -7257,7 +5890,7 @@ function app__inherits(subClass, superClass) { if (typeof superClass !== "functi
 // Code-splitting is automated for routes
 
 
-var app_store = configureStore();
+var store = configureStore();
 
 var app__ref = Object(preact_min["h"])(game, { path: '/' });
 
@@ -7287,7 +5920,7 @@ var app_App = function (_Component) {
   App.prototype.render = function render() {
     return Object(preact_min["h"])(
       preact_redux_esm_Provider,
-      { store: app_store },
+      { store: store },
       Object(preact_min["h"])(
         'div',
         { id: 'app' },
@@ -7587,6 +6220,77 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("pv+l")(module)))
+
+/***/ }),
+
+/***/ "OY3Y":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ../node_modules/invariant/invariant.js
+var invariant = __webpack_require__("UyDz");
+var invariant_default = /*#__PURE__*/__webpack_require__.n(invariant);
+
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/utils/isFunction.js
+var isFunction = __webpack_require__("8B3Z");
+
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/utils/identity.js
+var identity = __webpack_require__("lCPP");
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isNull.js
+/* harmony default export */ var isNull = (function (value) {
+  return value === null;
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/createAction.js
+/* harmony export (immutable) */ __webpack_exports__["a"] = createAction;
+
+
+
+
+function createAction(type, payloadCreator, metaCreator) {
+  if (payloadCreator === void 0) {
+    payloadCreator = identity["a" /* default */];
+  }
+
+  invariant_default()(Object(isFunction["a" /* default */])(payloadCreator) || isNull(payloadCreator), 'Expected payloadCreator to be a function, undefined or null');
+  var finalPayloadCreator = isNull(payloadCreator) || payloadCreator === identity["a" /* default */] ? identity["a" /* default */] : function (head) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    return head instanceof Error ? head : payloadCreator.apply(void 0, [head].concat(args));
+  };
+  var hasMeta = Object(isFunction["a" /* default */])(metaCreator);
+  var typeString = type.toString();
+
+  var actionCreator = function actionCreator() {
+    var payload = finalPayloadCreator.apply(void 0, arguments);
+    var action = {
+      type: type
+    };
+
+    if (payload instanceof Error) {
+      action.error = true;
+    }
+
+    if (payload !== undefined) {
+      action.payload = payload;
+    }
+
+    if (hasMeta) {
+      action.meta = metaCreator.apply(void 0, arguments);
+    }
+
+    return action;
+  };
+
+  actionCreator.toString = function () {
+    return typeString;
+  };
+
+  return actionCreator;
+}
 
 /***/ }),
 
@@ -12587,17 +11291,47 @@ module.exports = invariant;
 
 /***/ }),
 
+/***/ "Vyyu":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return startDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return nextDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return closeDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return saveCharacterToHistory; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux_actions_es_createAction__ = __webpack_require__("OY3Y");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants_actions__ = __webpack_require__("5QES");
+
+
+
+var startDialog = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions_es_createAction__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1__constants_actions__["n" /* START_DIALOG */], function (characterName) {
+  return characterName;
+});
+
+var nextDialog = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions_es_createAction__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1__constants_actions__["i" /* NEXT_DIALOG */], function (conversation) {
+  return conversation;
+});
+
+var closeDialog = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions_es_createAction__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1__constants_actions__["g" /* CLOSE_DIALOG */], function (conversation) {
+  return conversation;
+});
+
+var saveCharacterToHistory = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions_es_createAction__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1__constants_actions__["l" /* SAVE_CHARACTER_TO_HISTORY */], function (character) {
+  return character;
+});
+
+/***/ }),
+
 /***/ "aV+f":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return combineReducers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return bindActionCreators; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createStore; });
+/* unused harmony export combineReducers */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return bindActionCreators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return applyMiddleware; });
+/* unused harmony export compose */
+/* unused harmony export __DO_NOT_USE__ActionTypes */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__("LkZ7");
 
 
@@ -13237,6 +11971,491 @@ module.exports = {"character":"character__3WXLR"};
 
 /***/ }),
 
+/***/ "bKsd":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ../node_modules/invariant/invariant.js
+var invariant = __webpack_require__("UyDz");
+var invariant_default = /*#__PURE__*/__webpack_require__.n(invariant);
+
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/utils/isFunction.js
+var isFunction = __webpack_require__("8B3Z");
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isSymbol.js
+/* harmony default export */ var isSymbol = (function (value) {
+  return typeof value === 'symbol' || typeof value === 'object' && Object.prototype.toString.call(value) === '[object Symbol]';
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isEmpty.js
+/* harmony default export */ var isEmpty = (function (value) {
+  return value.length === 0;
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/toString.js
+/* harmony default export */ var utils_toString = (function (value) {
+  return value.toString();
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isString.js
+/* harmony default export */ var isString = (function (value) {
+  return typeof value === 'string';
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/constants.js
+var DEFAULT_NAMESPACE = '/';
+var ACTION_TYPE_DELIMITER = '||';
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/combineActions.js
+
+
+
+
+
+
+
+
+function isValidActionType(type) {
+  return isString(type) || Object(isFunction["a" /* default */])(type) || isSymbol(type);
+}
+
+function isValidActionTypes(types) {
+  if (isEmpty(types)) {
+    return false;
+  }
+
+  return types.every(isValidActionType);
+}
+
+function combineActions() {
+  for (var _len = arguments.length, actionsTypes = new Array(_len), _key = 0; _key < _len; _key++) {
+    actionsTypes[_key] = arguments[_key];
+  }
+
+  invariant_default()(isValidActionTypes(actionsTypes), 'Expected action types to be strings, symbols, or action creators');
+  var combinedActionType = actionsTypes.map(utils_toString).join(ACTION_TYPE_DELIMITER);
+  return {
+    toString: function toString() {
+      return combinedActionType;
+    }
+  };
+}
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/createAction.js + 1 modules
+var createAction = __webpack_require__("OY3Y");
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isPlainObject.js
+/* harmony default export */ var isPlainObject = (function (value) {
+  if (typeof value !== 'object' || value === null) return false;
+  var proto = value;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(value) === proto;
+});
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/utils/identity.js
+var identity = __webpack_require__("lCPP");
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isArray.js
+/* harmony default export */ var isArray = (function (value) {
+  return Array.isArray(value);
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isNil.js
+/* harmony default export */ var isNil = (function (value) {
+  return value === null || value === undefined;
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/getLastElement.js
+/* harmony default export */ var getLastElement = (function (array) {
+  return array[array.length - 1];
+});
+// EXTERNAL MODULE: ../node_modules/to-camel-case/index.js
+var to_camel_case = __webpack_require__("eHdh");
+var to_camel_case_default = /*#__PURE__*/__webpack_require__.n(to_camel_case);
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/camelCase.js
+
+var namespacer = '/';
+/* harmony default export */ var camelCase = (function (type) {
+  return type.includes(namespacer) ? type.split(namespacer).map(to_camel_case_default.a).join(namespacer) : to_camel_case_default()(type);
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/arrayToObject.js
+/* harmony default export */ var arrayToObject = (function (array, callback) {
+  return array.reduce(function (partialObject, element) {
+    return callback(partialObject, element);
+  }, {});
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isMap.js
+/* harmony default export */ var isMap = (function (value) {
+  return typeof Map !== 'undefined' && value instanceof Map;
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/ownKeys.js
+
+function ownKeys(object) {
+  if (isMap(object)) {
+    // We are using loose transforms in babel. Here we are trying to convert an
+    // interable to an array. Loose mode expects everything to already be an
+    // array. The problem is that our eslint rules encourage us to prefer
+    // spread over Array.from.
+    //
+    // Instead of disabling loose mode we simply disable the warning.
+    // eslint-disable-next-line unicorn/prefer-spread
+    return Array.from(object.keys());
+  }
+
+  if (typeof Reflect !== 'undefined' && typeof Reflect.ownKeys === 'function') {
+    return Reflect.ownKeys(object);
+  }
+
+  var keys = Object.getOwnPropertyNames(object);
+
+  if (typeof Object.getOwnPropertySymbols === 'function') {
+    keys = keys.concat(Object.getOwnPropertySymbols(object));
+  }
+
+  return keys;
+}
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/get.js
+
+function get(key, x) {
+  return isMap(x) ? x.get(key) : x[key];
+}
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenWhenNode.js
+
+
+
+/* harmony default export */ var flattenWhenNode = (function (predicate) {
+  return function flatten(map, _temp, partialFlatMap, partialFlatActionType) {
+    var _ref = _temp === void 0 ? {} : _temp,
+        _ref$namespace = _ref.namespace,
+        namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace,
+        prefix = _ref.prefix;
+
+    if (partialFlatMap === void 0) {
+      partialFlatMap = {};
+    }
+
+    if (partialFlatActionType === void 0) {
+      partialFlatActionType = '';
+    }
+
+    function connectNamespace(type) {
+      var _ref2;
+
+      if (!partialFlatActionType) return type;
+      var types = type.toString().split(ACTION_TYPE_DELIMITER);
+      var partials = partialFlatActionType.split(ACTION_TYPE_DELIMITER);
+      return (_ref2 = []).concat.apply(_ref2, partials.map(function (p) {
+        return types.map(function (t) {
+          return "" + p + namespace + t;
+        });
+      })).join(ACTION_TYPE_DELIMITER);
+    }
+
+    function connectPrefix(type) {
+      if (partialFlatActionType || !prefix) {
+        return type;
+      }
+
+      return "" + prefix + namespace + type;
+    }
+
+    ownKeys(map).forEach(function (type) {
+      var nextNamespace = connectPrefix(connectNamespace(type));
+      var mapValue = get(type, map);
+
+      if (predicate(mapValue)) {
+        flatten(mapValue, {
+          namespace: namespace,
+          prefix: prefix
+        }, partialFlatMap, nextNamespace);
+      } else {
+        partialFlatMap[nextNamespace] = mapValue;
+      }
+    });
+    return partialFlatMap;
+  };
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenActionMap.js
+
+
+/* harmony default export */ var flattenActionMap = (flattenWhenNode(isPlainObject));
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/unflattenActionCreators.js
+
+
+
+function unflattenActionCreators(flatActionCreators, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$namespace = _ref.namespace,
+      namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace,
+      prefix = _ref.prefix;
+
+  function unflatten(flatActionType, partialNestedActionCreators, partialFlatActionTypePath) {
+    var nextNamespace = camelCase(partialFlatActionTypePath.shift());
+
+    if (isEmpty(partialFlatActionTypePath)) {
+      partialNestedActionCreators[nextNamespace] = flatActionCreators[flatActionType];
+    } else {
+      if (!partialNestedActionCreators[nextNamespace]) {
+        partialNestedActionCreators[nextNamespace] = {};
+      }
+
+      unflatten(flatActionType, partialNestedActionCreators[nextNamespace], partialFlatActionTypePath);
+    }
+  }
+
+  var nestedActionCreators = {};
+  Object.getOwnPropertyNames(flatActionCreators).forEach(function (type) {
+    var unprefixedType = prefix ? type.replace("" + prefix + namespace, '') : type;
+    return unflatten(type, nestedActionCreators, unprefixedType.split(namespace));
+  });
+  return nestedActionCreators;
+}
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/createActions.js
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
+  } else {
+    obj[key] = value;
+  }return obj;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createActions(actionMap) {
+  for (var _len = arguments.length, identityActions = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    identityActions[_key - 1] = arguments[_key];
+  }
+
+  var options = isPlainObject(getLastElement(identityActions)) ? identityActions.pop() : {};
+  invariant_default()(identityActions.every(isString) && (isString(actionMap) || isPlainObject(actionMap)), 'Expected optional object followed by string action types');
+
+  if (isString(actionMap)) {
+    return actionCreatorsFromIdentityActions([actionMap].concat(identityActions), options);
+  }
+
+  return _objectSpread({}, actionCreatorsFromActionMap(actionMap, options), actionCreatorsFromIdentityActions(identityActions, options));
+}
+
+function actionCreatorsFromActionMap(actionMap, options) {
+  var flatActionMap = flattenActionMap(actionMap, options);
+  var flatActionCreators = actionMapToActionCreators(flatActionMap);
+  return unflattenActionCreators(flatActionCreators, options);
+}
+
+function actionMapToActionCreators(actionMap, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      prefix = _ref.prefix,
+      _ref$namespace = _ref.namespace,
+      namespace = _ref$namespace === void 0 ? DEFAULT_NAMESPACE : _ref$namespace;
+
+  function isValidActionMapValue(actionMapValue) {
+    if (Object(isFunction["a" /* default */])(actionMapValue) || isNil(actionMapValue)) {
+      return true;
+    }
+
+    if (isArray(actionMapValue)) {
+      var _actionMapValue$ = actionMapValue[0],
+          payload = _actionMapValue$ === void 0 ? identity["a" /* default */] : _actionMapValue$,
+          meta = actionMapValue[1];
+      return Object(isFunction["a" /* default */])(payload) && Object(isFunction["a" /* default */])(meta);
+    }
+
+    return false;
+  }
+
+  return arrayToObject(Object.keys(actionMap), function (partialActionCreators, type) {
+    var _objectSpread2;
+
+    var actionMapValue = actionMap[type];
+    invariant_default()(isValidActionMapValue(actionMapValue), 'Expected function, undefined, null, or array with payload and meta ' + ("functions for " + type));
+    var prefixedType = prefix ? "" + prefix + namespace + type : type;
+    var actionCreator = isArray(actionMapValue) ? createAction["a" /* default */].apply(void 0, [prefixedType].concat(actionMapValue)) : Object(createAction["a" /* default */])(prefixedType, actionMapValue);
+    return _objectSpread({}, partialActionCreators, (_objectSpread2 = {}, _objectSpread2[type] = actionCreator, _objectSpread2));
+  });
+}
+
+function actionCreatorsFromIdentityActions(identityActions, options) {
+  var actionMap = arrayToObject(identityActions, function (partialActionMap, type) {
+    var _objectSpread3;
+
+    return _objectSpread({}, partialActionMap, (_objectSpread3 = {}, _objectSpread3[type] = identity["a" /* default */], _objectSpread3));
+  });
+  var actionCreators = actionMapToActionCreators(actionMap, options);
+  return arrayToObject(Object.keys(actionCreators), function (partialActionCreators, type) {
+    var _objectSpread4;
+
+    return _objectSpread({}, partialActionCreators, (_objectSpread4 = {}, _objectSpread4[camelCase(type)] = actionCreators[type], _objectSpread4));
+  });
+}
+// EXTERNAL MODULE: ../node_modules/just-curry-it/index.js
+var just_curry_it = __webpack_require__("LbRA");
+var just_curry_it_default = /*#__PURE__*/__webpack_require__.n(just_curry_it);
+
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/createCurriedAction.js
+
+
+/* harmony default export */ var createCurriedAction = (function (type, payloadCreator) {
+  return just_curry_it_default()(Object(createAction["a" /* default */])(type, payloadCreator), payloadCreator.length);
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/isUndefined.js
+/* harmony default export */ var isUndefined = (function (value) {
+  return value === undefined;
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/handleAction.js
+
+
+
+
+
+
+
+
+function handleAction(type, reducer, defaultState) {
+  if (reducer === void 0) {
+    reducer = identity["a" /* default */];
+  }
+
+  var types = utils_toString(type).split(ACTION_TYPE_DELIMITER);
+  invariant_default()(!isUndefined(defaultState), "defaultState for reducer handling " + types.join(', ') + " should be defined");
+  invariant_default()(Object(isFunction["a" /* default */])(reducer) || isPlainObject(reducer), 'Expected reducer to be a function or object with next and throw reducers');
+
+  var _ref = Object(isFunction["a" /* default */])(reducer) ? [reducer, reducer] : [reducer.next, reducer.throw].map(function (aReducer) {
+    return isNil(aReducer) ? identity["a" /* default */] : aReducer;
+  }),
+      nextReducer = _ref[0],
+      throwReducer = _ref[1];
+
+  return function (state, action) {
+    if (state === void 0) {
+      state = defaultState;
+    }
+
+    var actionType = action.type;
+
+    if (!actionType || types.indexOf(utils_toString(actionType)) === -1) {
+      return state;
+    }
+
+    return (action.error === true ? throwReducer : nextReducer)(state, action);
+  };
+}
+// CONCATENATED MODULE: ../node_modules/reduce-reducers/es/index.js
+/* harmony default export */ var es = (function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  var initialState = typeof args[args.length - 1] !== 'function' && args.pop();
+  var reducers = args;
+
+  if (typeof initialState === 'undefined') {
+    throw new TypeError('The initial state may not be undefined. If you do not want to set a value for this reducer, you can use null instead of undefined.');
+  }
+
+  return function (prevState, value) {
+    for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+      args[_key2 - 2] = arguments[_key2];
+    }
+
+    var prevStateIsUndefined = typeof prevState === 'undefined';
+    var valueIsUndefined = typeof value === 'undefined';
+
+    if (prevStateIsUndefined && valueIsUndefined && initialState) {
+      return initialState;
+    }
+
+    return reducers.reduce(function (newState, reducer) {
+      return reducer.apply(undefined, [newState, value].concat(args));
+    }, prevStateIsUndefined && !valueIsUndefined && initialState ? initialState : prevState);
+  };
+});
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/hasGeneratorInterface.js
+
+function hasGeneratorInterface(handler) {
+  var keys = ownKeys(handler);
+  var hasOnlyInterfaceNames = keys.every(function (ownKey) {
+    return ownKey === 'next' || ownKey === 'throw';
+  });
+  return keys.length && keys.length <= 2 && hasOnlyInterfaceNames;
+}
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/utils/flattenReducerMap.js
+
+
+
+
+/* harmony default export */ var flattenReducerMap = (flattenWhenNode(function (node) {
+  return (isPlainObject(node) || isMap(node)) && !hasGeneratorInterface(node);
+}));
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/handleActions.js
+
+
+
+
+
+
+
+
+function handleActions(handlers, defaultState, options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  invariant_default()(isPlainObject(handlers) || isMap(handlers), 'Expected handlers to be a plain object.');
+  var flattenedReducerMap = flattenReducerMap(handlers, options);
+  var reducers = ownKeys(flattenedReducerMap).map(function (type) {
+    return handleAction(type, get(type, flattenedReducerMap), defaultState);
+  });
+  var reducer = es.apply(void 0, reducers.concat([defaultState]));
+  return function (state, action) {
+    if (state === void 0) {
+      state = defaultState;
+    }
+
+    return reducer(state, action);
+  };
+}
+// CONCATENATED MODULE: ../node_modules/redux-actions/es/index.js
+/* unused concated harmony import combineActions */
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, false, function() { return combineActions; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "a", function() { return createAction["a" /* default */]; });
+/* unused concated harmony import createActions */
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, false, function() { return createActions; });
+/* unused concated harmony import createCurriedAction */
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, false, function() { return createCurriedAction; });
+/* unused concated harmony import handleAction */
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, false, function() { return handleAction; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "b", function() { return handleActions; });
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "eAsJ":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13298,715 +12517,533 @@ function toCamelCase(string) {
 
 /***/ }),
 
-/***/ "eW0v":
+/***/ "l11E":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DOM", function() { return DOM; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Children", function() { return Children; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createClass", function() { return createClass; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPortal", function() { return createPortal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFactory", function() { return createFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneElement", function() { return cloneElement$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidElement", function() { return isValidElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findDOMNode", function() { return findDOMNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unmountComponentAtNode", function() { return unmountComponentAtNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return PureComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_renderSubtreeIntoContainer", function() { return renderSubtreeIntoContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_batchedUpdates", function() { return unstable_batchedUpdates; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return extend; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("5D9O");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
-/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "PropTypes", function() { return __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_preact__ = __webpack_require__("KM04");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_preact__);
+
+// EXTERNAL MODULE: ../node_modules/redux/es/redux.js
+var redux = __webpack_require__("aV+f");
+
+// EXTERNAL MODULE: ../node_modules/redux-immutable/dist/index.js
+var dist = __webpack_require__("IU3z");
+var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
+
+// EXTERNAL MODULE: ../node_modules/immutable/dist/immutable.es.js
+var immutable_es = __webpack_require__("vqB5");
+
+// EXTERNAL MODULE: ../node_modules/redux-actions/es/index.js + 26 modules
+var es = __webpack_require__("bKsd");
+
+// CONCATENATED MODULE: ./data/locations/firstLocation.js
+/* harmony default export */ var firstLocation = ({
+	name: 'firstLocation',
+	characters: [{
+		name: 'Vasia',
+		available: true
+	}],
+	nextLocations: [{
+		name: 'secondLocation',
+		available: true,
+		type: 'top'
+	}],
+	backLocation: null
+});
+// CONCATENATED MODULE: ./data/locations/secondLocation.js
+/* harmony default export */ var secondLocation = ({
+	name: 'secondLocation',
+	characters: [{
+		name: 'Sokol',
+		available: true
+	}],
+	nextLocations: null,
+	backLocation: {
+		name: 'firstLocation',
+		available: true
+	}
+});
+// CONCATENATED MODULE: ./data/locations/index.js
+
+
+
+/* harmony default export */ var locations = ({
+	firstLocation: firstLocation,
+	secondLocation: secondLocation
+});
+// EXTERNAL MODULE: ./constants/actions.js
+var actions = __webpack_require__("5QES");
+
+// CONCATENATED MODULE: ./reducers/general.js
+var _handleActions;
 
 
 
 
-var version = '15.1.0'; // trick libraries to think we are react
 
-var ELEMENTS = 'a abbr address area article aside audio b base bdi bdo big blockquote body br button canvas caption cite code col colgroup data datalist dd del details dfn dialog div dl dt em embed fieldset figcaption figure footer form h1 h2 h3 h4 h5 h6 head header hgroup hr html i iframe img input ins kbd keygen label legend li link main map mark menu menuitem meta meter nav noscript object ol optgroup option output p param picture pre progress q rp rt ruby s samp script section select small source span strong style sub summary sup table tbody td textarea tfoot th thead time title tr track u ul var video wbr circle clipPath defs ellipse g image line linearGradient mask path pattern polygon polyline radialGradient rect stop svg text tspan'.split(' ');
 
-var REACT_ELEMENT_TYPE = typeof Symbol !== 'undefined' && Symbol.for && Symbol.for('react.element') || 0xeac7;
-
-var COMPONENT_WRAPPER_KEY = typeof Symbol !== 'undefined' && Symbol.for ? Symbol.for('__preactCompatWrapper') : '__preactCompatWrapper';
-
-// don't autobind these methods since they already have guaranteed context.
-var AUTOBIND_BLACKLIST = {
-	constructor: 1,
-	render: 1,
-	shouldComponentUpdate: 1,
-	componentWillReceiveProps: 1,
-	componentWillUpdate: 1,
-	componentDidUpdate: 1,
-	componentWillMount: 1,
-	componentDidMount: 1,
-	componentWillUnmount: 1,
-	componentDidUnmount: 1
-};
-
-var CAMEL_PROPS = /^(?:accent|alignment|arabic|baseline|cap|clip|color|fill|flood|font|glyph|horiz|marker|overline|paint|stop|strikethrough|stroke|text|underline|unicode|units|v|vector|vert|word|writing|x)[A-Z]/;
-
-var BYPASS_HOOK = {};
-
-/*global process*/
-var DEV = false;
-try {
-	DEV = "production" !== 'production';
-} catch (e) {}
-
-// a component that renders nothing. Used to replace components for unmountComponentAtNode.
-function EmptyComponent() {
-	return null;
-}
-
-// make react think we're react.
-var VNode = Object(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])('a', null).constructor;
-VNode.prototype.$$typeof = REACT_ELEMENT_TYPE;
-VNode.prototype.preactCompatUpgraded = false;
-VNode.prototype.preactCompatNormalized = false;
-
-Object.defineProperty(VNode.prototype, 'type', {
-	get: function get() {
-		return this.nodeName;
-	},
-	set: function set(v) {
-		this.nodeName = v;
-	},
-	configurable: true
+var general_initialState = Object(immutable_es["fromJS"])({
+	locations: locations,
+	locationActive: locations.firstLocation,
+	inventory: Object(immutable_es["List"])(),
+	actions: Object(immutable_es["List"])(),
+	isOpenChest: false,
+	displayTask: null,
+	message: ''
 });
 
-Object.defineProperty(VNode.prototype, 'props', {
-	get: function get() {
-		return this.attributes;
-	},
-	set: function set(v) {
-		this.attributes = v;
-	},
-	configurable: true
-});
+var general = Object(es["b" /* handleActions */])((_handleActions = {}, _handleActions[actions["d" /* CHANGE_LOCATION */]] = function (state, _ref) {
+	var locationName = _ref.payload;
 
-var oldEventHook = __WEBPACK_IMPORTED_MODULE_1_preact__["options"].event;
-__WEBPACK_IMPORTED_MODULE_1_preact__["options"].event = function (e) {
-	if (oldEventHook) {
-		e = oldEventHook(e);
-	}
-	e.persist = Object;
-	e.nativeEvent = e;
-	return e;
-};
-
-var oldVnodeHook = __WEBPACK_IMPORTED_MODULE_1_preact__["options"].vnode;
-__WEBPACK_IMPORTED_MODULE_1_preact__["options"].vnode = function (vnode) {
-	if (!vnode.preactCompatUpgraded) {
-		vnode.preactCompatUpgraded = true;
-
-		var tag = vnode.nodeName,
-		    attrs = vnode.attributes = vnode.attributes == null ? {} : extend({}, vnode.attributes);
-
-		if (typeof tag === 'function') {
-			if (tag[COMPONENT_WRAPPER_KEY] === true || tag.prototype && 'isReactComponent' in tag.prototype) {
-				if (vnode.children && String(vnode.children) === '') {
-					vnode.children = undefined;
-				}
-				if (vnode.children) {
-					attrs.children = vnode.children;
-				}
-
-				if (!vnode.preactCompatNormalized) {
-					normalizeVNode(vnode);
-				}
-				handleComponentVNode(vnode);
-			}
-		} else {
-			if (vnode.children && String(vnode.children) === '') {
-				vnode.children = undefined;
-			}
-			if (vnode.children) {
-				attrs.children = vnode.children;
-			}
-
-			if (attrs.defaultValue) {
-				if (!attrs.value && attrs.value !== 0) {
-					attrs.value = attrs.defaultValue;
-				}
-				delete attrs.defaultValue;
-			}
-
-			handleElementVNode(vnode, attrs);
-		}
-	}
-
-	if (oldVnodeHook) {
-		oldVnodeHook(vnode);
-	}
-};
-
-function handleComponentVNode(vnode) {
-	var tag = vnode.nodeName,
-	    a = vnode.attributes;
-
-	vnode.attributes = {};
-	if (tag.defaultProps) {
-		extend(vnode.attributes, tag.defaultProps);
-	}
-	if (a) {
-		extend(vnode.attributes, a);
-	}
-}
-
-function handleElementVNode(vnode, a) {
-	var shouldSanitize, attrs, i;
-	if (a) {
-		for (i in a) {
-			if (shouldSanitize = CAMEL_PROPS.test(i)) {
-				break;
-			}
-		}
-		if (shouldSanitize) {
-			attrs = vnode.attributes = {};
-			for (i in a) {
-				if (a.hasOwnProperty(i)) {
-					attrs[CAMEL_PROPS.test(i) ? i.replace(/([A-Z0-9])/, '-$1').toLowerCase() : i] = a[i];
-				}
-			}
-		}
-	}
-}
-
-// proxy render() since React returns a Component reference.
-function render$1(vnode, parent, callback) {
-	var prev = parent && parent._preactCompatRendered && parent._preactCompatRendered.base;
-
-	// ignore impossible previous renders
-	if (prev && prev.parentNode !== parent) {
-		prev = null;
-	}
-
-	// default to first Element child
-	if (!prev && parent) {
-		prev = parent.firstElementChild;
-	}
-
-	// remove unaffected siblings
-	for (var i = parent.childNodes.length; i--;) {
-		if (parent.childNodes[i] !== prev) {
-			parent.removeChild(parent.childNodes[i]);
-		}
-	}
-
-	var out = Object(__WEBPACK_IMPORTED_MODULE_1_preact__["render"])(vnode, parent, prev);
-	if (parent) {
-		parent._preactCompatRendered = out && (out._component || { base: out });
-	}
-	if (typeof callback === 'function') {
-		callback();
-	}
-	return out && out._component || out;
-}
-
-var ContextProvider = function ContextProvider() {};
-
-ContextProvider.prototype.getChildContext = function () {
-	return this.props.context;
-};
-ContextProvider.prototype.render = function (props) {
-	return props.children[0];
-};
-
-function renderSubtreeIntoContainer(parentComponent, vnode, container, callback) {
-	var wrap = Object(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(ContextProvider, { context: parentComponent.context }, vnode);
-	var renderContainer = render$1(wrap, container);
-	var component = renderContainer._component || renderContainer.base;
-	if (callback) {
-		callback.call(component, renderContainer);
-	}
-	return component;
-}
-
-function Portal(props) {
-	renderSubtreeIntoContainer(this, props.vnode, props.container);
-}
-
-function createPortal(vnode, container) {
-	return Object(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(Portal, { vnode: vnode, container: container });
-}
-
-function unmountComponentAtNode(container) {
-	var existing = container._preactCompatRendered && container._preactCompatRendered.base;
-	if (existing && existing.parentNode === container) {
-		Object(__WEBPACK_IMPORTED_MODULE_1_preact__["render"])(Object(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(EmptyComponent), container, existing);
-		return true;
-	}
-	return false;
-}
-
-var ARR = [];
-
-// This API is completely unnecessary for Preact, so it's basically passthrough.
-var Children = {
-	map: function map(children, fn, ctx) {
-		if (children == null) {
-			return null;
-		}
-		children = Children.toArray(children);
-		if (ctx && ctx !== children) {
-			fn = fn.bind(ctx);
-		}
-		return children.map(fn);
-	},
-	forEach: function forEach(children, fn, ctx) {
-		if (children == null) {
-			return null;
-		}
-		children = Children.toArray(children);
-		if (ctx && ctx !== children) {
-			fn = fn.bind(ctx);
-		}
-		children.forEach(fn);
-	},
-	count: function count(children) {
-		return children && children.length || 0;
-	},
-	only: function only(children) {
-		children = Children.toArray(children);
-		if (children.length !== 1) {
-			throw new Error('Children.only() expects only one child.');
-		}
-		return children[0];
-	},
-	toArray: function toArray(children) {
-		if (children == null) {
-			return [];
-		}
-		return ARR.concat(children);
-	}
-};
-
-/** Track current render() component for ref assignment */
-var currentComponent;
-
-function createFactory(type) {
-	return createElement.bind(null, type);
-}
-
-var DOM = {};
-for (var i = ELEMENTS.length; i--;) {
-	DOM[ELEMENTS[i]] = createFactory(ELEMENTS[i]);
-}
-
-function upgradeToVNodes(arr, offset) {
-	for (var i = offset || 0; i < arr.length; i++) {
-		var obj = arr[i];
-		if (Array.isArray(obj)) {
-			upgradeToVNodes(obj);
-		} else if (obj && typeof obj === 'object' && !isValidElement(obj) && (obj.props && obj.type || obj.attributes && obj.nodeName || obj.children)) {
-			arr[i] = createElement(obj.type || obj.nodeName, obj.props || obj.attributes, obj.children);
-		}
-	}
-}
-
-function isStatelessComponent(c) {
-	return typeof c === 'function' && !(c.prototype && c.prototype.render);
-}
-
-// wraps stateless functional components in a PropTypes validator
-function wrapStatelessComponent(WrappedComponent) {
-	return createClass({
-		displayName: WrappedComponent.displayName || WrappedComponent.name,
-		render: function render() {
-			return WrappedComponent(this.props, this.context);
-		}
+	var locations = state.get('locations');
+	if (!locations.has(locationName)) throw new Error('Location not found!');
+	return state.merge({
+		locationActive: locations.get(locationName)
 	});
-}
-
-function statelessComponentHook(Ctor) {
-	var Wrapped = Ctor[COMPONENT_WRAPPER_KEY];
-	if (Wrapped) {
-		return Wrapped === true ? Ctor : Wrapped;
-	}
-
-	Wrapped = wrapStatelessComponent(Ctor);
-
-	Object.defineProperty(Wrapped, COMPONENT_WRAPPER_KEY, { configurable: true, value: true });
-	Wrapped.displayName = Ctor.displayName;
-	Wrapped.propTypes = Ctor.propTypes;
-	Wrapped.defaultProps = Ctor.defaultProps;
-
-	Object.defineProperty(Ctor, COMPONENT_WRAPPER_KEY, { configurable: true, value: Wrapped });
-
-	return Wrapped;
-}
-
-function createElement() {
-	var args = [],
-	    len = arguments.length;
-	while (len--) {
-		args[len] = arguments[len];
-	}upgradeToVNodes(args, 2);
-	return normalizeVNode(__WEBPACK_IMPORTED_MODULE_1_preact__["h"].apply(void 0, args));
-}
-
-function normalizeVNode(vnode) {
-	vnode.preactCompatNormalized = true;
-
-	applyClassName(vnode);
-
-	if (isStatelessComponent(vnode.nodeName)) {
-		vnode.nodeName = statelessComponentHook(vnode.nodeName);
-	}
-
-	var ref = vnode.attributes.ref,
-	    type = ref && typeof ref;
-	if (currentComponent && (type === 'string' || type === 'number')) {
-		vnode.attributes.ref = createStringRefProxy(ref, currentComponent);
-	}
-
-	applyEventNormalization(vnode);
-
-	return vnode;
-}
-
-function cloneElement$1(element, props) {
-	var children = [],
-	    len = arguments.length - 2;
-	while (len-- > 0) {
-		children[len] = arguments[len + 2];
-	}if (!isValidElement(element)) {
-		return element;
-	}
-	var elementProps = element.attributes || element.props;
-	var node = Object(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(element.nodeName || element.type, extend({}, elementProps), element.children || elementProps && elementProps.children);
-	// Only provide the 3rd argument if needed.
-	// Arguments 3+ overwrite element.children in preactCloneElement
-	var cloneArgs = [node, props];
-	if (children && children.length) {
-		cloneArgs.push(children);
-	} else if (props && props.children) {
-		cloneArgs.push(props.children);
-	}
-	return normalizeVNode(__WEBPACK_IMPORTED_MODULE_1_preact__["cloneElement"].apply(void 0, cloneArgs));
-}
-
-function isValidElement(element) {
-	return element && (element instanceof VNode || element.$$typeof === REACT_ELEMENT_TYPE);
-}
-
-function createStringRefProxy(name, component) {
-	return component._refProxies[name] || (component._refProxies[name] = function (resolved) {
-		if (component && component.refs) {
-			component.refs[name] = resolved;
-			if (resolved === null) {
-				delete component._refProxies[name];
-				component = null;
-			}
-		}
+}, _handleActions[actions["a" /* ADD_OBJECT_TO_INVENTORY */]] = function (state, _ref2) {
+	var object = _ref2.payload;
+	return state.merge({
+		inventory: state.get('inventory').push(object)
 	});
-}
+}, _handleActions[actions["k" /* REMOVE_OBJECT_TO_INVENTORY */]] = function (state, _ref3) {
+	var object = _ref3.payload;
+	return state.merge({
+		inventory: state.get('inventory').filter(function (_object) {
+			return _object.name !== object.name;
+		})
+	});
+}, _handleActions[actions["j" /* OPEN_CHEST */]] = function (state) {
+	return state.merge({
+		isOpenChest: true
+	});
+}, _handleActions[actions["f" /* CLOSE_CHEST */]] = function (state) {
+	return state.merge({
+		isOpenChest: false
+	});
+}, _handleActions[actions["m" /* SET_MESSAGE */]] = function (state, _ref4) {
+	var message = _ref4.payload;
+	return state.merge({
+		message: message
+	});
+}, _handleActions), general_initialState);
 
-function applyEventNormalization(ref) {
-	var nodeName = ref.nodeName;
-	var attributes = ref.attributes;
+/* harmony default export */ var reducers_general = (general);
+// CONCATENATED MODULE: ./constants/status-task.js
+var NEW = 'Новое';
+var DONE = 'Выполненное';
+var FAILED = 'Проваленое';
+// CONCATENATED MODULE: ./data/characters/vasia.js
 
-	if (!attributes || typeof nodeName !== 'string') {
-		return;
-	}
-	var props = {};
-	for (var i in attributes) {
-		props[i.toLowerCase()] = i;
-	}
-	if (props.ondoubleclick) {
-		attributes.ondblclick = attributes[props.ondoubleclick];
-		delete attributes[props.ondoubleclick];
-	}
-	// for *textual inputs* (incl textarea), normalize `onChange` -> `onInput`:
-	if (props.onchange && (nodeName === 'textarea' || nodeName.toLowerCase() === 'input' && !/^fil|che|rad/i.test(attributes.type))) {
-		var normalized = props.oninput || 'oninput';
-		if (!attributes[normalized]) {
-			attributes[normalized] = multihook([attributes[normalized], attributes[props.onchange]]);
-			delete attributes[props.onchange];
-		}
-	}
-}
 
-function applyClassName(vnode) {
-	var a = vnode.attributes || (vnode.attributes = {});
-	classNameDescriptor.enumerable = 'className' in a;
-	if (a.className) {
-		a.class = a.className;
-	}
-	Object.defineProperty(a, 'className', classNameDescriptor);
-}
-
-var classNameDescriptor = {
-	configurable: true,
-	get: function get() {
-		return this.class;
-	},
-	set: function set(v) {
-		this.class = v;
-	}
-};
-
-function extend(base, props) {
-	var arguments$1 = arguments;
-
-	for (var i = 1, obj = void 0; i < arguments.length; i++) {
-		if (obj = arguments$1[i]) {
-			for (var key in obj) {
-				if (obj.hasOwnProperty(key)) {
-					base[key] = obj[key];
+/* harmony default export */ var vasia = ({
+	name: 'Vasia',
+	startDialog: 'offerTask',
+	dialogs: {
+		offerTask: {
+			text: 'Привет, не хочешь выручить земляка?',
+			context: 'с надеждой',
+			close: true,
+			answers: [{
+				text: 'Ближе к делу',
+				character: {
+					text: 'Есть стражник в городе, его зовут Сокол. Он должен мне кое что передать. Поговори с ним, скажи что от Васи. Потом сразу сюда, я тебя буду ждать сдесь. Даже не вздумай убежать с моей поссылкой. Если всё пройдет гладко за мной не заржавеет',
+					context: 'радосно',
+					answers: [{
+						text: 'Договорились, скоро буду',
+						close: true,
+						task: {
+							name: 'parcel',
+							action: 'add'
+						},
+						history: {
+							characters: [{
+								name: 'Vasia',
+								startDialog: 'default'
+							}]
+						}
+					}]
 				}
-			}
-		}
-	}
-	return base;
-}
-
-function shallowDiffers(a, b) {
-	for (var i in a) {
-		if (!(i in b)) {
-			return true;
-		}
-	}
-	for (var i$1 in b) {
-		if (a[i$1] !== b[i$1]) {
-			return true;
-		}
-	}
-	return false;
-}
-
-function findDOMNode(component) {
-	return component && (component.base || component.nodeType === 1 && component) || null;
-}
-
-function F() {}
-
-function createClass(obj) {
-	function cl(props, context) {
-		bindAll(this);
-		Component$1.call(this, props, context, BYPASS_HOOK);
-		newComponentHook.call(this, props, context);
-	}
-
-	obj = extend({ constructor: cl }, obj);
-
-	// We need to apply mixins here so that getDefaultProps is correctly mixed
-	if (obj.mixins) {
-		applyMixins(obj, collateMixins(obj.mixins));
-	}
-	if (obj.statics) {
-		extend(cl, obj.statics);
-	}
-	if (obj.propTypes) {
-		cl.propTypes = obj.propTypes;
-	}
-	if (obj.defaultProps) {
-		cl.defaultProps = obj.defaultProps;
-	}
-	if (obj.getDefaultProps) {
-		cl.defaultProps = obj.getDefaultProps.call(cl);
-	}
-
-	F.prototype = Component$1.prototype;
-	cl.prototype = extend(new F(), obj);
-
-	cl.displayName = obj.displayName || 'Component';
-
-	return cl;
-}
-
-// Flatten an Array of mixins to a map of method name to mixin implementations
-function collateMixins(mixins) {
-	var keyed = {};
-	for (var i = 0; i < mixins.length; i++) {
-		var mixin = mixins[i];
-		for (var key in mixin) {
-			if (mixin.hasOwnProperty(key) && typeof mixin[key] === 'function') {
-				(keyed[key] || (keyed[key] = [])).push(mixin[key]);
-			}
-		}
-	}
-	return keyed;
-}
-
-// apply a mapping of Arrays of mixin methods to a component prototype
-function applyMixins(proto, mixins) {
-	for (var key in mixins) {
-		if (mixins.hasOwnProperty(key)) {
-			proto[key] = multihook(mixins[key].concat(proto[key] || ARR), key === 'getDefaultProps' || key === 'getInitialState' || key === 'getChildContext');
-		}
-	}
-}
-
-function bindAll(ctx) {
-	for (var i in ctx) {
-		var v = ctx[i];
-		if (typeof v === 'function' && !v.__bound && !AUTOBIND_BLACKLIST.hasOwnProperty(i)) {
-			(ctx[i] = v.bind(ctx)).__bound = true;
-		}
-	}
-}
-
-function callMethod(ctx, m, args) {
-	if (typeof m === 'string') {
-		m = ctx.constructor.prototype[m];
-	}
-	if (typeof m === 'function') {
-		return m.apply(ctx, args);
-	}
-}
-
-function multihook(hooks, skipDuplicates) {
-	return function () {
-		var arguments$1 = arguments;
-		var this$1 = this;
-
-		var ret;
-		for (var i = 0; i < hooks.length; i++) {
-			var r = callMethod(this$1, hooks[i], arguments$1);
-
-			if (skipDuplicates && r != null) {
-				if (!ret) {
-					ret = {};
+			}, {
+				text: 'Ух ты, этот комок шерсти может еще разговаривать. Не хочешь меня выручить, есть пару золотых для будущего друга?',
+				character: {
+					text: 'Есть, подойди поближе',
+					context: 'со злостью',
+					close: true,
+					message: 'Вы были убиты и изнасилованы!'
 				}
-				for (var key in r) {
-					if (r.hasOwnProperty(key)) {
-						ret[key] = r[key];
-					}
+			}]
+		},
+		default: {
+			text: 'Есть новости для меня?',
+			context: 'с надеждой',
+			close: true,
+			answers: [{
+				conditions: {
+					actions: [],
+					inventory: ['parcel']
+				},
+				text: 'Вот твоя поссылка',
+				task: {
+					params: {
+						name: 'parcel',
+						status: DONE
+					},
+					action: 'change_status'
+				},
+				inventory: {
+					object: {
+						name: 'parcel'
+					},
+					action: 'remove'
+				},
+				character: {
+					text: 'Спасибо земляк, вот тебе 10 золотых',
+					close: true,
+					message: 'Вы прошли игру поздравляю!'
 				}
-			} else if (typeof r !== 'undefined') {
-				ret = r;
-			}
+			}]
 		}
-		return ret;
-	};
-}
-
-function newComponentHook(props, context) {
-	propsHook.call(this, props, context);
-	this.componentWillReceiveProps = multihook([propsHook, this.componentWillReceiveProps || 'componentWillReceiveProps']);
-	this.render = multihook([propsHook, beforeRender, this.render || 'render', afterRender]);
-}
-
-function propsHook(props, context) {
-	if (!props) {
-		return;
-	}
-
-	// React annoyingly special-cases single children, and some react components are ridiculously strict about this.
-	var c = props.children;
-	if (c && Array.isArray(c) && c.length === 1 && (typeof c[0] === 'string' || typeof c[0] === 'function' || c[0] instanceof VNode)) {
-		props.children = c[0];
-
-		// but its totally still going to be an Array.
-		if (props.children && typeof props.children === 'object') {
-			props.children.length = 1;
-			props.children[0] = props.children;
-		}
-	}
-
-	// add proptype checking
-	if (DEV) {
-		var ctor = typeof this === 'function' ? this : this.constructor,
-		    propTypes = this.propTypes || ctor.propTypes;
-		var displayName = this.displayName || ctor.name;
-
-		if (propTypes) {
-			__WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.checkPropTypes(propTypes, props, 'prop', displayName);
-		}
-	}
-}
-
-function beforeRender(props) {
-	currentComponent = this;
-}
-
-function afterRender() {
-	if (currentComponent === this) {
-		currentComponent = null;
-	}
-}
-
-function Component$1(props, context, opts) {
-	__WEBPACK_IMPORTED_MODULE_1_preact__["Component"].call(this, props, context);
-	this.state = this.getInitialState ? this.getInitialState() : {};
-	this.refs = {};
-	this._refProxies = {};
-	if (opts !== BYPASS_HOOK) {
-		newComponentHook.call(this, props, context);
-	}
-}
-extend(Component$1.prototype = new __WEBPACK_IMPORTED_MODULE_1_preact__["Component"](), {
-	constructor: Component$1,
-
-	isReactComponent: {},
-
-	replaceState: function replaceState(state, callback) {
-		var this$1 = this;
-
-		this.setState(state, callback);
-		for (var i in this$1.state) {
-			if (!(i in state)) {
-				delete this$1.state[i];
-			}
-		}
-	},
-
-	getDOMNode: function getDOMNode() {
-		return this.base;
-	},
-
-	isMounted: function isMounted() {
-		return !!this.base;
 	}
 });
+// CONCATENATED MODULE: ./data/characters/sokol.js
 
-function PureComponent(props, context) {
-	Component$1.call(this, props, context);
-}
-F.prototype = Component$1.prototype;
-PureComponent.prototype = new F();
-PureComponent.prototype.isPureReactComponent = true;
-PureComponent.prototype.shouldComponentUpdate = function (props, state) {
-	return shallowDiffers(this.props, props) || shallowDiffers(this.state, state);
+
+var answerParcel = {
+	conditions: {
+		tasks: [{
+			name: 'parcel',
+			status: NEW
+		}]
+	},
+	forceDisplay: true,
+	forceDisplayMessage: 'Нужно имееть задание от Васи!',
+	text: 'Я от Васи за поссылкой',
+	inventory: {
+		object: {
+			name: 'parcel',
+			description: 'Поссылка для Васи'
+		},
+		action: 'add'
+	},
+	task: {
+		params: {
+			name: 'parcel',
+			tip: 'Вы получили поссылку, осталось её вернуть Васе'
+		},
+		action: 'tip'
+	},
+	character: {
+		text: 'Ааа че ты сразу не сказал? Вот бери...',
+		close: true
+	}
 };
 
-function unstable_batchedUpdates(callback) {
-	callback();
-}
+/* harmony default export */ var sokol = ({
+	name: 'Sokol',
+	startDialog: 'default',
+	dialogs: {
+		getOut: {
+			text: 'Я не ясно выразился, проваливай!',
+			close: true,
+			isTarget: true,
+			answers: [answerParcel]
+		},
+		default: {
+			text: 'Ты кто такой? Я тебя раньше не видел.',
+			close: true,
+			isTarget: true,
+			answers: [answerParcel, {
+				text: 'Я фермер из Стрижовки',
+				history: {
+					characters: [{
+						name: 'Sokol',
+						startDialog: 'getOut'
+					}]
+				},
+				character: {
+					text: 'Тебя еще сдесь не хватало, проваливай олух!',
+					close: true,
+					answers: [{
+						text: 'Я тебе сейчас покажу кто олух!',
+						character: {
+							text: '...',
+							close: true,
+							message: 'Вы не сумели показать, кто олух и были убиты!'
+						}
+					}]
+				}
+			}]
+		}
+	}
+});
+// CONCATENATED MODULE: ./data/characters/index.js
 
-var index = {
-	version: version,
-	DOM: DOM,
-	PropTypes: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a,
-	Children: Children,
-	render: render$1,
-	createClass: createClass,
-	createPortal: createPortal,
-	createFactory: createFactory,
-	createElement: createElement,
-	cloneElement: cloneElement$1,
-	isValidElement: isValidElement,
-	findDOMNode: findDOMNode,
-	unmountComponentAtNode: unmountComponentAtNode,
-	Component: Component$1,
-	PureComponent: PureComponent,
-	unstable_renderSubtreeIntoContainer: renderSubtreeIntoContainer,
-	unstable_batchedUpdates: unstable_batchedUpdates,
-	__spread: extend
+
+
+/* harmony default export */ var data_characters = ({
+	Vasia: vasia,
+	Sokol: sokol
+});
+// CONCATENATED MODULE: ./reducers/conversation.js
+var conversation__handleActions;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+
+
+
+
+
+var conversation_initialState = Object(immutable_es["fromJS"])({
+	dialog: null,
+	character: null,
+	history: Object(immutable_es["List"])()
+});
+
+var conversation_conversation = Object(es["b" /* handleActions */])((conversation__handleActions = {}, conversation__handleActions[actions["n" /* START_DIALOG */]] = function (state, _ref) {
+	var characterName = _ref.payload;
+
+	var dialog = void 0;
+	var character = data_characters[characterName];
+	var characterFromHistory = state.get('history').find(function (character) {
+		return character.name === characterName;
+	});
+	if (!character) throw new Error('Character not found!');
+
+	if (characterFromHistory) {
+		dialog = character.dialogs[characterFromHistory.startDialog];
+	} else {
+		dialog = character.dialogs[character.startDialog];
+	}
+
+	return state.merge({
+		character: character,
+		dialog: dialog
+	});
+}, conversation__handleActions[actions["i" /* NEXT_DIALOG */]] = function (state, _ref2) {
+	var conversation = _ref2.payload;
+	return state.merge({
+		dialog: conversation
+	});
+}, conversation__handleActions[actions["g" /* CLOSE_DIALOG */]] = function (state) {
+	return state.merge({
+		dialog: null,
+		character: null
+	});
+}, conversation__handleActions[actions["l" /* SAVE_CHARACTER_TO_HISTORY */]] = function (state, _ref3) {
+	var character = _ref3.payload;
+
+	var history = state.get('history');
+	if (history.find(function (_character) {
+		return _character.name === character.name;
+	})) {
+		history = history.map(function (_character) {
+			if (_character.name === character.name) {
+				return character;
+			}
+			return _extends({}, _character, character);
+		});
+	} else {
+		history = history.push(character);
+	}
+	return state.merge({
+		history: history
+	});
+}, conversation__handleActions), conversation_initialState);
+
+/* harmony default export */ var reducers_conversation = (conversation_conversation);
+// CONCATENATED MODULE: ./data/tasks/index.js
+
+
+/* harmony default export */ var tasks = ({
+	parcel: {
+		name: 'parcel',
+		title: 'Поссылка от Сокола',
+		description: 'Нужно поговорить с городским стражником Соколом, он должен передать поссылку Васе',
+		tips: [],
+		status: NEW
+	}
+});
+// CONCATENATED MODULE: ./reducers/book.js
+var book__handleActions;
+
+var book__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+
+
+
+
+
+var book_initialState = Object(immutable_es["fromJS"])({
+  tasks: Object(immutable_es["List"])(),
+  displayTask: null
+});
+
+var book = Object(es["b" /* handleActions */])((book__handleActions = {}, book__handleActions[actions["b" /* ADD_TASK */]] = function (state, _ref) {
+  var taskName = _ref.payload;
+
+  var task = tasks[taskName];
+  if (!task) throw new Error('Task not found!');
+  return state.merge({
+    tasks: state.get('tasks').push(task)
+  });
+}, book__handleActions[actions["c" /* ADD_TIP_TO_TASK */]] = function (state, _ref2) {
+  var task = _ref2.payload;
+
+  var displayTask = state.get('displayTask');
+  return state.merge({
+    tasks: state.get('tasks').map(function (_task) {
+      if (_task.name === task.name) {
+        var nextTask = book__extends({}, _task, {
+          tips: [].concat(_task.tips, [task.tip])
+        });
+        if (displayTask && displayTask.name === nextTask.name) {
+          displayTask = nextTask;
+        }
+        return nextTask;
+      }
+      return _task;
+    }),
+    displayTask: displayTask
+  });
+}, book__handleActions[actions["e" /* CHANGE_STATUS_TASK */]] = function (state, _ref3) {
+  var task = _ref3.payload;
+
+  return state.merge({
+    tasks: state.get('tasks').map(function (_task) {
+      if (_task.name === task.name) {
+        return book__extends({}, _task, {
+          status: task.status
+        });
+      }
+      return _task;
+    })
+  });
+}, book__handleActions[actions["h" /* DISPLAY_TASK */]] = function (state, _ref4) {
+  var task = _ref4.payload;
+  return state.merge({
+    displayTask: task
+  });
+}, book__handleActions), book_initialState);
+
+/* harmony default export */ var reducers_book = (book);
+// CONCATENATED MODULE: ./reducers/index.js
+
+
+
+
+
+var reducers = Object(dist["combineReducers"])({
+	general: reducers_general,
+	conversation: reducers_conversation,
+	book: reducers_book
+});
+
+/* harmony default export */ var reducers_0 = (reducers);
+// EXTERNAL MODULE: ../node_modules/noty/lib/noty.js
+var noty = __webpack_require__("J21r");
+var noty_default = /*#__PURE__*/__webpack_require__.n(noty);
+
+// EXTERNAL MODULE: ./middleware/style.scss
+var style = __webpack_require__("y8vE");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// CONCATENATED MODULE: ./middleware/noty.js
+
+
+
+
+
+var noty_createNoty = function createNoty(text) {
+  new noty_default.a({
+    text: text,
+    layout: 'topCenter',
+    timeout: 5000
+  }).show();
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (index);
+var noty_notyMiddleware = function notyMiddleware(store) {
+  return function (next) {
+    return function (action) {
+      var type = action.type,
+          payload = action.payload;
 
-//# sourceMappingURL=preact-compat.es.js.map
+
+      if (type === actions["b" /* ADD_TASK */]) {
+        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E');
+      } else if (type === actions["e" /* CHANGE_STATUS_TASK */]) {
+        if (payload.status === DONE) {
+          noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
+        }
+      } else if (type === actions["a" /* ADD_OBJECT_TO_INVENTORY */]) {
+        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C');
+      } else if (type === actions["k" /* REMOVE_OBJECT_TO_INVENTORY */]) {
+        noty_createNoty('\u041F\u0440\u0435\u0434\u043C\u0435\u0442 \u0443\u0431\u0440\u0430\u043D \u0438\u0437 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F');
+      } else if (type === actions["c" /* ADD_TIP_TO_TASK */]) {
+        noty_createNoty('\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u043E');
+      }
+
+      return next(action);
+    };
+  };
+};
+
+/* harmony default export */ var middleware_noty = (noty_notyMiddleware);
+// EXTERNAL MODULE: ./actions/conversation.js
+var actions_conversation = __webpack_require__("Vyyu");
+
+// CONCATENATED MODULE: ./middleware/dialog.js
+
+
+
+
+var dialog_dialogMiddleware = function dialogMiddleware(store) {
+  return function (next) {
+    return function (action) {
+      var type = action.type,
+          payload = action.payload;
+
+      if (type === actions["d" /* CHANGE_LOCATION */]) {
+        var state = store.getState();
+        var characters = state.get('general').get('locations').get(payload).get('characters');
+
+        if (characters.size > 0) {
+          var conversation = state.get('conversation');
+          var history = conversation.has('history') ? conversation.get('history').toArray() : null;
+          characters.toArray().forEach(function (_character) {
+            var character = _character.toObject();
+            var startDialogCharacter = void 0;
+            var characterDefault = data_characters[character.name];
+            var characterHistory = history && history.find(function (char) {
+              return char.name === character.name;
+            });
+            if (characterHistory) {
+              startDialogCharacter = characterDefault.dialogs[characterHistory.startDialog];
+            } else {
+              startDialogCharacter = characterDefault.dialogs[characterDefault.startDialog];
+            }
+            if (startDialogCharacter && startDialogCharacter.isTarget) {
+              store.dispatch(Object(actions_conversation["d" /* startDialog */])(character.name));
+            }
+          });
+        }
+      }
+      return next(action);
+    };
+  };
+};
+
+/* harmony default export */ var middleware_dialog = (dialog_dialogMiddleware);
+// CONCATENATED MODULE: ./configureStoreProd.js
+/* harmony export (immutable) */ __webpack_exports__["default"] = configureStore;
+
+
+
+
+
+function configureStore(initialState) {
+  return Object(redux["c" /* createStore */])(reducers_0, initialState, Object(redux["a" /* applyMiddleware */])(middleware_noty, middleware_dialog));
+}
 
 /***/ }),
 
@@ -14080,6 +13117,16 @@ function uncamelize(string) {
     return previous + ' ' + uppers.toLowerCase().split('').join(' ');
   });
 }
+
+/***/ }),
+
+/***/ "lCPP":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function (value) {
+  return value;
+});
 
 /***/ }),
 
@@ -19668,68 +18715,6 @@ var Iterable = Collection;
 
 /***/ }),
 
-/***/ "wVGV":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = __webpack_require__("Asjh");
-
-function emptyFunction() {}
-
-module.exports = function () {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret) {
-      // It is still safe when called from React.
-      return;
-    }
-    var err = new Error('Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use PropTypes.checkPropTypes() to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
-    err.name = 'Invariant Violation';
-    throw err;
-  };
-  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  };
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim
-  };
-
-  ReactPropTypes.checkPropTypes = emptyFunction;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-/***/ }),
-
 /***/ "y6tj":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19793,29 +18778,6 @@ module.exports = exports['default'];
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "yP4S":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var compose = __webpack_require__("aV+f").compose;
-
-exports.__esModule = true;
-exports.composeWithDevTools = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : function () {
-  if (arguments.length === 0) return undefined;
-  if (typeof arguments[0] === 'object') return compose;
-  return compose.apply(null, arguments);
-};
-
-exports.devToolsEnhancer = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : function () {
-  return function (noop) {
-    return noop;
-  };
-};
 
 /***/ })
 

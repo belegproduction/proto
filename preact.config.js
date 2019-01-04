@@ -1,4 +1,5 @@
 var SpritesmithPlugin = require('webpack-spritesmith');
+var { EnvironmentPlugin } = require('webpack');
 var path = require('path');
 
 
@@ -24,6 +25,9 @@ export default function (config, env, helpers) {
         cssImageRef: '/spritesmith-generated/sprite.png',
       }
     }));
+  config.plugins.push(new EnvironmentPlugin({
+    NODE_ENV: env.isProd ? 'production' : 'development',
+  }));
   config.resolve.modules.push('spritesmith-generated');
 }
 

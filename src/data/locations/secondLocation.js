@@ -9,7 +9,6 @@ export default {
 	nextLocations: null,
   backLocation: {
     name: 'firstLocation',
-    available: true,
-    type: 'bottom'
+    available: true
   }
 };
