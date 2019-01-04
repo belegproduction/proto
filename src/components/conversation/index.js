@@ -1,7 +1,9 @@
 import style from './style';
 
-const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog, checkConditions }) => (
-	<div>
+const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog, checkConditions }) => {
+	let indexAnswer = 0;
+	
+	return (<div>
 		<div className={style.conversation}>
 			<div className={style['conversation--content']}>
 				<div className={style['conversation--text']}>
@@ -9,19 +11,25 @@ const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog
 				</div>
 				<ul className={style['conversation--answers']}>
 					{Array.isArray(dialog.answers) && dialog.answers
-						.filter(checkConditions)
-						.map((answer, index) => (
-							<li className={style['conversation--answer']}>
-								<div className={style['conversation--index-answer']}>
-									{index + 1}
-								</div>
-								<div className={`${style['conversation--text-answer']} ${answer.forceDisplay ? style['conversation--text-answer-disabled'] : ''}`} onClick={() => handlerNextDialog(answer)}>
-									{answer.text} {answer.forceDisplay && answer.forceDisplayMessage ? <span>{`(${answer.forceDisplayMessage})`}</span> : ''}
-								</div>
-							</li>))}
+						.map((answer, index) => {
+							let resultCheckConditions = checkConditions(answer);
+							if(resultCheckConditions || answer.forceDisplay){
+								indexAnswer += 1;
+								return (<li className={style['conversation--answer']}>
+									<div className={style['conversation--index-answer']}>
+										{indexAnswer}
+									</div>
+									<div className={`${style['conversation--text-answer']} ${answer.forceDisplay && !resultCheckConditions ? style['conversation--text-answer-disabled'] : ''}`}
+											 onClick={() => handlerNextDialog(answer)}>
+										{answer.text} {answer.forceDisplay && answer.forceDisplayMessage ? <span>{`(${answer.forceDisplayMessage})`}</span> : ''}
+									</div>
+								</li>)
+              }
+              return <div/>;
+						})}
 						{dialog.close && <li className={style['conversation--answer']}>
 							<div className={style['conversation--index-answer']}>
-								-
+								{indexAnswer + 1}
 							</div>
 							<div className={style['conversation--text-answer']} onClick={handlerCloseDialog}>
 								(Покинуть диалог)
@@ -35,7 +43,7 @@ const Conversation = ({ character, dialog, handlerNextDialog, handlerCloseDialog
 			</div>
 		</div>
 		<div className={style['conversation--bg']} />
-	</div>
-);
+	</div>);
+};
 
 export default Conversation;

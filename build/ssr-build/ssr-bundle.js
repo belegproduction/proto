@@ -6175,11 +6175,13 @@ var answerParcel = {
 		getOut: {
 			text: 'Я не ясно выразился, проваливай!',
 			close: true,
+			isTarget: true,
 			answers: [answerParcel]
 		},
 		default: {
 			text: 'Ты кто такой? Я тебя раньше не видел.',
 			close: true,
+			isTarget: true,
 			answers: [answerParcel, {
 				text: 'Я фермер из Стрижовки',
 				history: {
@@ -6325,7 +6327,7 @@ var book = handleActions((book__handleActions = {}, book__handleActions[ADD_TASK
         var nextTask = book__extends({}, _task, {
           tips: [].concat(_task.tips, [task.tip])
         });
-        if (nextTask.name === displayTask.name) {
+        if (displayTask && displayTask.name === nextTask.name) {
           displayTask = nextTask;
         }
         return nextTask;
@@ -6417,14 +6419,76 @@ var noty_notyMiddleware = function notyMiddleware(store) {
 };
 
 /* harmony default export */ var middleware_noty = (noty_notyMiddleware);
+// CONCATENATED MODULE: ./actions/conversation.js
+
+
+
+var startDialog = createAction(START_DIALOG, function (characterName) {
+  return characterName;
+});
+
+var nextDialog = createAction(NEXT_DIALOG, function (conversation) {
+  return conversation;
+});
+
+var closeDialog = createAction(CLOSE_DIALOG, function (conversation) {
+  return conversation;
+});
+
+var saveCharacterToHistory = createAction(SAVE_CHARACTER_TO_HISTORY, function (character) {
+  return character;
+});
+// CONCATENATED MODULE: ./middleware/dialog.js
+
+
+
+
+var dialog_dialogMiddleware = function dialogMiddleware(store) {
+  return function (next) {
+    return function (action) {
+      var type = action.type,
+          payload = action.payload;
+
+      if (type === CHANGE_LOCATION) {
+        var state = store.getState();
+        var characters = state.get('general').get('locations').get(payload).get('characters');
+
+        if (characters.size > 0) {
+          var conversation = state.get('conversation');
+          var history = conversation.has('history') ? conversation.get('history').toArray() : null;
+          characters.toArray().forEach(function (_character) {
+            var character = _character.toObject();
+            var startDialogCharacter = void 0;
+            var characterDefault = data_characters[character.name];
+            var characterHistory = history && history.find(function (char) {
+              return char.name === character.name;
+            });
+            if (characterHistory) {
+              startDialogCharacter = characterDefault.dialogs[characterHistory.startDialog];
+            } else {
+              startDialogCharacter = characterDefault.dialogs[characterDefault.startDialog];
+            }
+            if (startDialogCharacter && startDialogCharacter.isTarget) {
+              store.dispatch(startDialog(character.name));
+            }
+          });
+        }
+      }
+      return next(action);
+    };
+  };
+};
+
+/* harmony default export */ var middleware_dialog = (dialog_dialogMiddleware);
 // CONCATENATED MODULE: ./configureStore.js
 
 
 
 
 
+
 function configureStore(initialState) {
-	return Object(redux["createStore"])(reducers_0, initialState, Object(redux_devtools_extension["composeWithDevTools"])(Object(redux["applyMiddleware"])(middleware_noty)));
+	return Object(redux["createStore"])(reducers_0, initialState, Object(redux_devtools_extension["composeWithDevTools"])(Object(redux["applyMiddleware"])(middleware_noty, middleware_dialog)));
 }
 // EXTERNAL MODULE: ../node_modules/reselect-immutable-helpers/dist.js
 var reselect_immutable_helpers_dist = __webpack_require__("qTRi");
@@ -6533,12 +6597,17 @@ var conversation_style_default = /*#__PURE__*/__webpack_require__.n(conversation
 
 
 
+var conversation__ref2 = Object(preact_min["h"])('div', null);
+
 var conversation_Conversation = function Conversation(_ref) {
 	var character = _ref.character,
 	    dialog = _ref.dialog,
 	    handlerNextDialog = _ref.handlerNextDialog,
 	    handlerCloseDialog = _ref.handlerCloseDialog,
 	    checkConditions = _ref.checkConditions;
+
+	var indexAnswer = 0;
+
 	return Object(preact_min["h"])(
 		'div',
 		null,
@@ -6565,29 +6634,35 @@ var conversation_Conversation = function Conversation(_ref) {
 				Object(preact_min["h"])(
 					'ul',
 					{ className: conversation_style_default.a['conversation--answers'] },
-					Array.isArray(dialog.answers) && dialog.answers.filter(checkConditions).map(function (answer, index) {
-						return Object(preact_min["h"])(
-							'li',
-							{ className: conversation_style_default.a['conversation--answer'] },
-							Object(preact_min["h"])(
-								'div',
-								{ className: conversation_style_default.a['conversation--index-answer'] },
-								index + 1
-							),
-							Object(preact_min["h"])(
-								'div',
-								{ className: conversation_style_default.a['conversation--text-answer'] + ' ' + (answer.forceDisplay ? conversation_style_default.a['conversation--text-answer-disabled'] : ''), onClick: function onClick() {
-										return handlerNextDialog(answer);
-									} },
-								answer.text,
-								' ',
-								answer.forceDisplay && answer.forceDisplayMessage ? Object(preact_min["h"])(
-									'span',
-									null,
-									'(' + answer.forceDisplayMessage + ')'
-								) : ''
-							)
-						);
+					Array.isArray(dialog.answers) && dialog.answers.map(function (answer, index) {
+						var resultCheckConditions = checkConditions(answer);
+						if (resultCheckConditions || answer.forceDisplay) {
+							indexAnswer += 1;
+							return Object(preact_min["h"])(
+								'li',
+								{ className: conversation_style_default.a['conversation--answer'] },
+								Object(preact_min["h"])(
+									'div',
+									{ className: conversation_style_default.a['conversation--index-answer'] },
+									indexAnswer
+								),
+								Object(preact_min["h"])(
+									'div',
+									{ className: conversation_style_default.a['conversation--text-answer'] + ' ' + (answer.forceDisplay && !resultCheckConditions ? conversation_style_default.a['conversation--text-answer-disabled'] : ''),
+										onClick: function onClick() {
+											return handlerNextDialog(answer);
+										} },
+									answer.text,
+									' ',
+									answer.forceDisplay && answer.forceDisplayMessage ? Object(preact_min["h"])(
+										'span',
+										null,
+										'(' + answer.forceDisplayMessage + ')'
+									) : ''
+								)
+							);
+						}
+						return conversation__ref2;
 					}),
 					dialog.close && Object(preact_min["h"])(
 						'li',
@@ -6595,7 +6670,7 @@ var conversation_Conversation = function Conversation(_ref) {
 						Object(preact_min["h"])(
 							'div',
 							{ className: conversation_style_default.a['conversation--index-answer'] },
-							'-'
+							indexAnswer + 1
 						),
 						Object(preact_min["h"])(
 							'div',
@@ -6874,25 +6949,6 @@ var closeChest = createAction(CLOSE_CHEST);
 var setMessage = createAction(SET_MESSAGE, function (message) {
   return message;
 });
-// CONCATENATED MODULE: ./actions/conversation.js
-
-
-
-var startDialog = createAction(START_DIALOG, function (characterName) {
-  return characterName;
-});
-
-var nextDialog = createAction(NEXT_DIALOG, function (conversation) {
-  return conversation;
-});
-
-var closeDialog = createAction(CLOSE_DIALOG, function (conversation) {
-  return conversation;
-});
-
-var saveCharacterToHistory = createAction(SAVE_CHARACTER_TO_HISTORY, function (character) {
-  return character;
-});
 // CONCATENATED MODULE: ./actions/book.js
 
 
@@ -7052,14 +7108,13 @@ var game_Game = function (_Component) {
       }
       handlerCloseDialog();
     }, _this.checkConditions = function (answer) {
-      var conditions = answer.conditions,
-          forceDisplay = answer.forceDisplay;
+      var conditions = answer.conditions;
       var _this$props3 = _this.props,
           inventory = _this$props3.inventory,
           tasks = _this$props3.tasks,
           actions = _this$props3.actions;
 
-      if (!conditions || forceDisplay) return true;
+      if (!conditions) return true;
 
       if (Array.isArray(conditions.inventory) && conditions.inventory.length && !conditions.inventory.every(function (object) {
         return inventory.find(function (_object) {

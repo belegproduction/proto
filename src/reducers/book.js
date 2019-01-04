@@ -25,7 +25,7 @@ const book = handleActions({
             ..._task,
             tips: [..._task.tips, task.tip]
           };
-					if(nextTask.name === displayTask.name) {
+					if(displayTask && displayTask.name === nextTask.name) {
             displayTask = nextTask;
 					}
           return nextTask;

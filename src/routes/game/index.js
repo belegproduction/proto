@@ -66,9 +66,9 @@ class Game extends Component {
   };
   
   checkConditions = (answer) => {
-    const {conditions, forceDisplay} = answer;
+    const {conditions} = answer;
     const {inventory, tasks, actions} = this.props;
-    if(!conditions || forceDisplay) return true;
+    if(!conditions) return true;
   
     if(Array.isArray(conditions.inventory) &&
       conditions.inventory.length &&

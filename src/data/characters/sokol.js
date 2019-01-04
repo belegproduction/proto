@@ -37,6 +37,7 @@ export default {
 		getOut: {
 			text: 'Я не ясно выразился, проваливай!',
 			close: true,
+      isTarget: true,
 			answers: [
 				answerParcel
 			]
